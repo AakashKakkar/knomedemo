@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophie Williams - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Sophie Williams</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=45" alt="Sophie Williams" class="profile-dp">
+            <h1>Sophie Williams</h1>
+            <p>Art History • Class of 2024 • 22 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Sophie Williams</div>
+                
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                
+                <div class="label">Last Updated</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number</div>
+                <div class="value">#ART2024010</div>
+                
+                <div class="label">Referred By</div>
+                <div class="value">Lisa Patel</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Female</div>
+                
+                <div class="label">Residence</div>
+                <div class="value">Kirkland House</div>
+                
+                <div class="label">Birthday</div>
+                <div class="value">04/10/2002</div>
+                
+                <div class="label">Hometown</div>
+                <div class="value">New York City, New York</div>
+                
+                <div class="label">Class of</div>
+                <div class="value">2024</div>
+                
+                <div class="label">High School</div>
+                <div class="value">Fiorello H. LaGuardia High School of Music & Art and Performing Arts</div>
+                
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                
+                <div class="label">Elementary</div>
+                <div class="value">PS 199 Jessie Isador Straus</div>
+                
+                <div class="label">Zodiac</div>
+                <div class="value">Aries</div>
+                
+                <div class="label">Artistic Era</div>
+                <div class="value">Specializing in Renaissance and Baroque Art</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">swilliams@harvard.edu</div>
+                
+                <div class="label">Links</div>
+                <div class="value">
+                    arthistory.harvard.edu/people/sophie-williams<br>
+                    instagram.com/sophies_art_world<br>
+                    linkedin.com/in/sophiewilliams-art
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Art Focus</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Renaissance Art</span>
+                        <span class="interest-tag">Baroque Period</span>
+                        <span class="interest-tag">Contemporary Art</span>
+                        <span class="interest-tag">Museum Studies</span>
+                        <span class="interest-tag">Art Conservation</span>
+                    </div>
+                </div>
+
+                <div class="label">Current Projects</div>
+                <div class="value">
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Medici Collection Study</h3>
+                            <p>Research on patronage in Renaissance Florence</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Digital Art Archive</h3>
+                            <p>Creating virtual tours of Harvard Art Museums</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="label">Museum Work</div>
+                <div class="value">
+                    - Harvard Art Museums Intern<br>
+                    - MFA Boston Student Guide<br>
+                    - Met Museum Summer Program Alumni
+                </div>
+
+                <div class="label">Favorite Artists</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Caravaggio</span>
+                        <span class="interest-tag">Artemisia Gentileschi</span>
+                        <span class="interest-tag">Botticelli</span>
+                        <span class="interest-tag">Rembrandt</span>
+                    </div>
+                </div>
+                
+                <div class="label">Art Books</div>
+                <div class="value">
+                    - "The Story of Art" by E.H. Gombrich<br>
+                    - "Lives of the Artists" by Vasari<br>
+                    - "Ways of Seeing" by John Berger
+                </div>
+                
+                <div class="label">Favorite Museums</div>
+                <div class="value">The Met, Uffizi Gallery, Louvre, Harvard Art Museums</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Italian (fluent), French (intermediate)</div>
+                
+                <div class="label">Art Tools</div>
+                <div class="value">Digital Archives, ArtStor, Conservation Tools</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">HAA 10: The Western Tradition</span>
+                        <span class="interest-tag">HAA 11: Renaissance Art</span>
+                        <span class="interest-tag">HAA 15: Baroque Art</span>
+                        <span class="interest-tag">HAA 18: Museum Studies</span>
+                    </div>
+                </div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">
+                    - Harvard Art Society (President)<br>
+                    - Museum Student Board<br>
+                    - Art Conservation Club<br>
+                    - Visual Arts Journal Editor
+                </div>
+                
+                <div class="label">Study Spots</div>
+                <div class="value">
+                    - Fine Arts Library<br>
+                    - Harvard Art Museums<br>
+                    - Kirkland House Art Room
+                </div>
+                
+                <div class="label">Campus Job</div>
+                <div class="value">Student Guide at Harvard Art Museums, Research Assistant in Art History Department</div>
+                
+                <div class="label">Office Hours</div>
+                <div class="value">Wednesdays 3-5 PM @ Sackler Museum</div>
+
+                <div class="label">Exhibitions</div>
+                <div class="value">
+                    - Curated "Student Perspectives on Renaissance Art"<br>
+                    - Co-organized "Modern Masters at Harvard"<br>
+                    - Digital Exhibition: "Virtual Venice"
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Art Journey</div>
+                <div class="value">Started with childhood visits to The Met, interned at museums throughout high school, now pursuing curatorial studies</div>
+                
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning sketching at the museum, afternoon art conservation workshop, evening lecture on Renaissance art</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">Museum Curator specializing in Italian Renaissance Art, Art Conservation Advocate</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Access to world-class art collections, mentorship from curators, opportunities to study original works</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The Renaissance Gallery at Harvard Art Museums</div>
+                
+                <div class="label">Life Motto</div>
+                <div class="value">"Art is not what you see, but what you make others see" - Edgar Degas</div>
+                
+                <div class="label">Best Memory</div>
+                <div class="value">First time seeing Botticelli's Primavera in Florence</div>
+                
+                <div class="label">Dream Project</div>
+                <div class="value">Curating a major exhibition on women artists of the Renaissance</div>
+                
+                <div class="label">Fun Fact</div>
+                <div class="value">I can identify most Renaissance paintings by their underdrawings! 🎨✨</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

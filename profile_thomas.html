@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Anderson - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-dp {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Thomas Anderson</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=12" alt="Thomas Anderson" class="profile-dp">
+            <h1>Thomas Anderson</h1>
+            <p>Philosophy • Class of 2025 • 20 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Thomas Anderson</div>
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                <div class="label">Last Updated</div>
+                <div class="value">March 25, 2024</div>
+                <div class="label">Member Number</div>
+                <div class="value">#HAR2024012</div>
+                <div class="label">Referred By</div>
+                <div class="value">Rachel Brown</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Male</div>
+                <div class="label">Residence</div>
+                <div class="value">Lowell House</div>
+                <div class="label">Birthday</div>
+                <div class="value">02/14/2004</div>
+                <div class="label">Hometown</div>
+                <div class="value">Austin, TX</div>
+                <div class="label">Class of</div>
+                <div class="value">2025</div>
+                <div class="label">High School</div>
+                <div class="value">Austin High School</div>
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                <div class="label">Elementary</div>
+                <div class="value">Mathews Elementary</div>
+                <div class="label">Zodiac</div>
+                <div class="value">Aquarius</div>
+                <div class="label">Psychic Profile</div>
+                <div class="value">Life Path Number: 3, Destiny Number: 7</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">tanderson@harvard.edu</div>
+                <div class="label">Links</div>
+                <div class="value">philosophy.net/tanderson<br>existentialquestions.org/thomas</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for</div>
+                <div class="value">Philosophy Discussion Partners, Debate Team Members, Poetry Enthusiasts</div>
+                
+                <div class="label">Relationship</div>
+                <div class="value">It's complicated (philosophically speaking)</div>
+                
+                <div class="label">Political Views</div>
+                <div class="value">Philosophical Anarchist</div>
+                
+                <div class="label">Interests</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Existentialism</span>
+                        <span class="interest-tag">Metaphysics</span>
+                        <span class="interest-tag">Ethics</span>
+                        <span class="interest-tag">Logic</span>
+                        <span class="interest-tag">Eastern Philosophy</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Artists</div>
+                <div class="value">Pink Floyd, Tool, Philip Glass</div>
+                
+                <div class="label">Favorite Movies</div>
+                <div class="value">The Matrix, Waking Life, The Seventh Seal</div>
+                
+                <div class="label">Favorite Cuisine</div>
+                <div class="value">Whatever is authentic and mindfully prepared</div>
+                
+                <div class="label">Public Figures</div>
+                <div class="value">Socrates, Nietzsche, Alan Watts</div>
+                
+                <div class="label">Book Recommendations</div>
+                <div class="value">Being and Time, The Myth of Sisyphus, Tao Te Ching</div>
+                
+                <div class="label">Manifestations</div>
+                <div class="value">To bridge Eastern and Western philosophical traditions</div>
+                
+                <div class="label">Future Aspirations</div>
+                <div class="value">Philosophy Professor and Author</div>
+                
+                <div class="label">Amazing Memory</div>
+                <div class="value">First time teaching Philosophy to high school students</div>
+                
+                <div class="label">Causes</div>
+                <div class="value">Critical Thinking Education, Philosophical Literacy, Mental Health</div>
+                
+                <div class="label">Baby Picture</div>
+                <div class="value"><img src="https://i.pravatar.cc/150?img=22" class="profile-image" alt="Baby Thomas"></div>
+                
+                <div class="label">Dislikes</div>
+                <div class="value">Dogmatic thinking, Shallow conversations, Reality TV</div>
+                
+                <div class="label">Most Used Emojis</div>
+                <div class="value">🤔 📚 🧠 ∞ 🕉️</div>
+                
+                <div class="label">Favorite Sport</div>
+                <div class="value">Chess (if it counts), Walking meditation</div>
+                
+                <div class="label">Favorite Games</div>
+                <div class="value">The Talos Principle, Portal, Everything</div>
+                
+                <div class="label">Pet Peeves</div>
+                <div class="value">Logical fallacies, Materialistic worldviews, Small talk</div>
+                
+                <div class="label">My Tribe</div>
+                <div class="value">Philosophers, Truth Seekers, Deep Thinkers</div>
+                
+                <div class="label">Embarrassing Moment</div>
+                <div class="value">Quoted Descartes incorrectly during a debate</div>
+                
+                <div class="label">Siblings</div>
+                <div class="value">Only child (perfect for contemplation)</div>
+                
+                <div class="label">Pets</div>
+                <div class="value">A cat named Schrodinger (both is and isn't there)</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Ancient Greek, Sanskrit basics</div>
+                
+                <div class="label">Announcement</div>
+                <div class="value">Starting a philosophical dialogue series!</div>
+                
+                <div class="label">Core Values</div>
+                <div class="value">Truth, Wisdom, Authenticity</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">Metaphysics, Ethics, Logic, Eastern Philosophy, Phenomenology</div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">Philosophy Club President, Debate Team, Meditation Society</div>
+                
+                <div class="label">First Meal</div>
+                <div class="value">Green tea and contemplation</div>
+                
+                <div class="label">Health Tip</div>
+                <div class="value">The unexamined life is not worth living - but don't forget to live</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning meditation, afternoon philosophical discussions, evening stargazing</div>
+                
+                <div class="label">Value in Friendship</div>
+                <div class="value">Dialectical partners in the pursuit of truth</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">A philosopher bridging ancient wisdom with modern thought</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">The ability to question, time to think, philosophical community</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The quiet corner of Widener Library's philosophy section</div>
+                
+                <div class="label">Passions</div>
+                <div class="value">Philosophical Inquiry, Consciousness Studies, Ethical Theory</div>
+                
+                <div class="label">Fictional Character</div>
+                <div class="value">Neo from The Matrix - but more philosophical, less kung fu</div>
+                
+                <div class="label">Future Advice</div>
+                <div class="value">Question everything, including this advice</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

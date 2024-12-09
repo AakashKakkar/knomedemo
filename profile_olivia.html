@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Taylor - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Olivia Taylor</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=47" alt="Olivia Taylor" class="profile-dp">
+            <h1>Olivia Taylor</h1>
+            <p>Environmental Science • Class of 2025 • 20 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Olivia Taylor</div>
+                
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                
+                <div class="label">Last Updated</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number</div>
+                <div class="value">#ENV2024012</div>
+                
+                <div class="label">Referred By</div>
+                <div class="value">Sophie Williams</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Female</div>
+                
+                <div class="label">Residence</div>
+                <div class="value">Adams House</div>
+                
+                <div class="label">Birthday</div>
+                <div class="value">07/22/2004</div>
+                
+                <div class="label">Hometown</div>
+                <div class="value">Portland, Oregon</div>
+                
+                <div class="label">Class of</div>
+                <div class="value">2025</div>
+                
+                <div class="label">High School</div>
+                <div class="value">Lincoln High School</div>
+                
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                
+                <div class="label">Elementary</div>
+                <div class="value">Chapman Elementary</div>
+                
+                <div class="label">Zodiac</div>
+                <div class="value">Cancer</div>
+                
+                <div class="label">Research Focus</div>
+                <div class="value">Climate Change and Marine Ecosystems</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">otaylor@harvard.edu</div>
+                
+                <div class="label">Links</div>
+                <div class="value">
+                    environment.harvard.edu/people/olivia-taylor<br>
+                    researchgate.net/oliviataylor<br>
+                    linkedin.com/in/oliviataylor-environment
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Research Areas</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Climate Change</span>
+                        <span class="interest-tag">Marine Biology</span>
+                        <span class="interest-tag">Conservation</span>
+                        <span class="interest-tag">Sustainability</span>
+                        <span class="interest-tag">Environmental Policy</span>
+                    </div>
+                </div>
+
+                <div class="label">Current Projects</div>
+                <div class="value">
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Coral Reef Study</h3>
+                            <p>Monitoring climate impact on reef ecosystems</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Campus Sustainability</h3>
+                            <p>Leading Harvard's zero-waste initiative</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="label">Field Work</div>
+                <div class="value">
+                    - Great Barrier Reef Research Assistant<br>
+                    - Pacific Northwest Forest Survey<br>
+                    - Harvard Forest Research Program
+                </div>
+
+                <div class="label">Research Tools</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">GIS</span>
+                        <span class="interest-tag">R Statistics</span>
+                        <span class="interest-tag">Environmental Sensors</span>
+                        <span class="interest-tag">Water Quality Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Books</div>
+                <div class="value">
+                    - "Silent Spring" by Rachel Carson<br>
+                    - "The Sixth Extinction" by Elizabeth Kolbert<br>
+                    - "Braiding Sweetgrass" by Robin Wall Kimmerer
+                </div>
+                
+                <div class="label">Field Sites</div>
+                <div class="value">Great Barrier Reef, Harvard Forest, Olympic National Park</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Spanish, R Programming</div>
+                
+                <div class="label">Research Equipment</div>
+                <div class="value">Water Quality Meters, Drone Mapping, Climate Sensors</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">ENVR 101: Climate Science</span>
+                        <span class="interest-tag">BIOL 150: Marine Biology</span>
+                        <span class="interest-tag">ENVR 201: Conservation Biology</span>
+                        <span class="interest-tag">STAT 104: Environmental Data</span>
+                    </div>
+                </div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">
+                    - Environmental Action Committee (President)<br>
+                    - Harvard Conservation Society<br>
+                    - Climate Crisis Task Force<br>
+                    - Sustainability Student Board
+                </div>
+                
+                <div class="label">Study Spots</div>
+                <div class="value">
+                    - Harvard Forest<br>
+                    - Museum of Natural History<br>
+                    - Adams House Garden
+                </div>
+                
+                <div class="label">Campus Job</div>
+                <div class="value">Research Assistant in Marine Biology Lab, Sustainability Office Intern</div>
+                
+                <div class="label">Office Hours</div>
+                <div class="value">Tuesdays 2-4 PM @ Bio Labs</div>
+
+                <div class="label">Field Research</div>
+                <div class="value">
+                    - Summer Research in Great Barrier Reef<br>
+                    - Harvard Forest Long-term Ecological Research<br>
+                    - Marine Biology Field Station
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Environmental Journey</div>
+                <div class="value">Growing up in Portland sparked my passion for environmental conservation. Started with local recycling initiatives, now researching global climate impacts.</div>
+                
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning field research, afternoon data analysis, evening sustainability committee meeting</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">Environmental Scientist focusing on marine ecosystem conservation and climate change mitigation</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Access to diverse ecosystems, mentorship from leading scientists, opportunities for field research</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The coral reefs during research dives</div>
+                
+                <div class="label">Life Motto</div>
+                <div class="value">"We don't inherit the Earth from our ancestors; we borrow it from our children"</div>
+                
+                <div class="label">Best Memory</div>
+                <div class="value">First time seeing a coral spawning event during field research</div>
+                
+                <div class="label">Dream Project</div>
+                <div class="value">Establishing a global network of marine protected areas</div>
+                
+                <div class="label">Fun Fact</div>
+                <div class="value">I can identify over 100 species of coral! 🌊🐠</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

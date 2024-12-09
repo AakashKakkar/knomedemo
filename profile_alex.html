@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Thompson - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+            transition: color 0.2s;
+        }
+
+        .back-button:hover {
+            color: #666;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-dp:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+            transition: background-color 0.2s;
+        }
+
+        .interest-tag:hover {
+            background: #e4e6e9;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .project-card p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Historical theme specific styles */
+        .value a {
+            color: #8b4513;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .value a:hover {
+            color: #5c2d0e;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                margin-bottom: -4px;
+                color: #888;
+            }
+
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-dp {
+                width: 120px;
+                height: 120px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interest-tag {
+                padding: 4px 10px;
+                font-size: 12px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .header {
+                position: static;
+                box-shadow: none;
+            }
+
+            .section {
+                break-inside: avoid;
+                box-shadow: none;
+            }
+
+            .back-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Alex Thompson</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=69" alt="Alex Thompson" class="profile-dp">
+            <h1>Alex Thompson</h1>
+            <p>History • Class of 2025 • 20 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Alex Thompson</div>
+                
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                
+                <div class="label">Last Updated</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number</div>
+                <div class="value">#HIS2024007</div>
+                
+                <div class="label">Referred By</div>
+                <div class="value">David Kim</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Male</div>
+                
+                <div class="label">Residence</div>
+                <div class="value">Lowell House</div>
+                
+                <div class="label">Birthday</div>
+                <div class="value">09/22/2004</div>
+                
+                <div class="label">Hometown</div>
+                <div class="value">Boston, Massachusetts</div>
+                
+                <div class="label">Class of</div>
+                <div class="value">2025</div>
+                
+                <div class="label">High School</div>
+                <div class="value">Boston Latin School</div>
+                
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                
+                <div class="label">Elementary</div>
+                <div class="value">Pierce School</div>
+                
+                <div class="label">Zodiac</div>
+                <div class="value">Virgo</div>
+                
+                <div class="label">Historical Era</div>
+                <div class="value">Specializing in American Revolution and Early Republic</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">athompson@harvard.edu</div>
+                
+                <div class="label">Links</div>
+                <div class="value">
+                    history.harvard.edu/people/alex-thompson<br>
+                    academia.edu/AlexThompson<br>
+                    linkedin.com/in/alexthompson-history
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Research Focus</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">American Revolution</span>
+                        <span class="interest-tag">Colonial America</span>
+                        <span class="interest-tag">Constitutional History</span>
+                        <span class="interest-tag">Maritime History</span>
+                        <span class="interest-tag">Boston History</span>
+                    </div>
+                </div>
+
+                <div class="label">Current Projects</div>
+                <div class="value">
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Boston Harbor Study</h3>
+                            <p>Research on maritime trade in colonial Boston</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Revolutionary Letters</h3>
+                            <p>Digitizing correspondence from 1775-1783</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="label">Archives Work</div>
+                <div class="value">
+                    - Massachusetts Historical Society<br>
+                    - Harvard University Archives<br>
+                    - Boston Public Library Special Collections
+                </div>
+
+                <div class="label">Historical Sites</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Bunker Hill</span>
+                        <span class="interest-tag">USS Constitution</span>
+                        <span class="interest-tag">Freedom Trail</span>
+                        <span class="interest-tag">Paul Revere House</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Books</div>
+                <div class="value">
+                    - "1776" by David McCullough<br>
+                    - "The Federalist Papers"<br>
+                    - "Common Sense" by Thomas Paine
+                </div>
+                
+                <div class="label">Historical Figures</div>
+                <div class="value">John Adams, Benjamin Franklin, Abigail Adams</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Latin (reading), French (intermediate)</div>
+                
+                <div class="label">Research Tools</div>
+                <div class="value">JSTOR, ProQuest Historical Newspapers, Ancestry.com</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">HIST 1776: Revolutionary America</span>
+                        <span class="interest-tag">HIST 1502: Colonial North America</span>
+                        <span class="interest-tag">HIST 1992: Maritime History</span>
+                        <span class="interest-tag">HIST 1876: Constitutional History</span>
+                    </div>
+                </div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">
+                    - Harvard Historical Society (President)<br>
+                    - Revolutionary War Reenactment Club<br>
+                    - History Journal Editorial Board<br>
+                    - Historical Preservation Society
+                </div>
+                
+                <div class="label">Study Spots</div>
+                <div class="value">
+                    - Widener Library Reading Room<br>
+                    - Massachusetts Historical Society<br>
+                    - Lowell House Library
+                </div>
+                
+                <div class="label">Campus Job</div>
+                <div class="value">Research Assistant in History Department, Tour Guide at Harvard Museum</div>
+                
+                <div class="label">Office Hours</div>
+                <div class="value">Tuesdays 2-4 PM @ Robinson Hall</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Historical Journey</div>
+                <div class="value">Growing up in Boston sparked my interest in American history. Started giving Freedom Trail tours at 16, now researching colonial maritime trade.</div>
+                
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning archives research, afternoon walking tour of historic Boston, evening discussion about constitutional history</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">History Professor specializing in Early American History, published author on maritime trade</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Living in a city rich with history, access to original documents, mentorship from renowned historians</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The USS Constitution at sunset - where maritime and revolutionary history meet</div>
+                
+                <div class="label">Life Motto</div>
+                <div class="value">"Those who don't know history are destined to repeat it"</div>
+                
+                <div class="label">Best Memory</div>
+                <div class="value">Finding an unknown letter from Paul Revere in the archives</div>
+                
+                <div class="label">Dream Project</div>
+                <div class="value">Creating a digital database of all colonial Boston maritime records</div>
+                
+                <div class="label">Fun Fact</div>
+                <div class="value">I can recite the entire Declaration of Independence from memory! 🎭🗽</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

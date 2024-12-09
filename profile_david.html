@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Thompson - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-dp {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">David Thompson</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=6" alt="David Thompson" class="profile-dp">
+            <h1>David Thompson</h1>
+            <p>History • Class of 2025 • 20 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">David Thompson</div>
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                <div class="label">Last Updated</div>
+                <div class="value">March 15, 2024</div>
+                <div class="label">Member Number</div>
+                <div class="value">#HAR2024006</div>
+                <div class="label">Referred By</div>
+                <div class="value">James Wilson</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Male</div>
+                <div class="label">Residence</div>
+                <div class="value">Adams House</div>
+                <div class="label">Birthday</div>
+                <div class="value">11/28/2003</div>
+                <div class="label">Hometown</div>
+                <div class="value">Boston, MA</div>
+                <div class="label">Class of</div>
+                <div class="value">2025</div>
+                <div class="label">High School</div>
+                <div class="value">Boston Latin School</div>
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                <div class="label">Elementary</div>
+                <div class="value">Josiah Quincy Elementary</div>
+                <div class="label">Zodiac</div>
+                <div class="value">Sagittarius</div>
+                <div class="label">Psychic Profile</div>
+                <div class="value">Life Path Number: 1, Destiny Number: 9</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">dthompson@harvard.edu</div>
+                <div class="label">Links</div>
+                <div class="value">academia.edu/davidthompson<br>historytoday.com/author/dthompson</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for</div>
+                <div class="value">Research Partners, Debate Club Members, Museum Buddies</div>
+                
+                <div class="label">Relationship</div>
+                <div class="value">Single</div>
+                
+                <div class="label">Political Views</div>
+                <div class="value">Progressive</div>
+                
+                <div class="label">Interests</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">American Revolution</span>
+                        <span class="interest-tag">Political History</span>
+                        <span class="interest-tag">Archaeology</span>
+                        <span class="interest-tag">Debate</span>
+                        <span class="interest-tag">Historical Reenactment</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Artists</div>
+                <div class="value">Hamilton Soundtrack, Classical Period Composers</div>
+                
+                <div class="label">Favorite Movies</div>
+                <div class="value">1776, Lincoln, Hamilton (Musical)</div>
+                
+                <div class="label">Favorite Cuisine</div>
+                <div class="value">New England Seafood, Colonial American</div>
+                
+                <div class="label">Public Figures</div>
+                <div class="value">David McCullough, Doris Kearns Goodwin, Ken Burns</div>
+                
+                <div class="label">Book Recommendations</div>
+                <div class="value">1776, Team of Rivals, The Federalist Papers</div>
+                
+                <div class="label">Manifestations</div>
+                <div class="value">To publish groundbreaking historical research</div>
+                
+                <div class="label">Future Aspirations</div>
+                <div class="value">Museum Curator or History Professor</div>
+                
+                <div class="label">Amazing Memory</div>
+                <div class="value">Leading a historical tour of Boston at age 16</div>
+                
+                <div class="label">Causes</div>
+                <div class="value">Historical Preservation, Public Education, Civic Engagement</div>
+                
+                <div class="label">Baby Picture</div>
+                <div class="value"><img src="https://i.pravatar.cc/150?img=16" class="profile-image" alt="Baby David"></div>
+                
+                <div class="label">Dislikes</div>
+                <div class="value">Historical inaccuracies, Lost primary sources, Modern revisionism</div>
+                
+                <div class="label">Most Used Emojis</div>
+                <div class="value">📚 🏛️ 🗽 ⚔️ 🎭</div>
+                
+                <div class="label">Favorite Sport</div>
+                <div class="value">Fencing, Revolutionary War Reenactments</div>
+                
+                <div class="label">Favorite Games</div>
+                <div class="value">Civilization VI, Assassin's Creed III, Age of Empires</div>
+                
+                <div class="label">Pet Peeves</div>
+                <div class="value">Misquoted historical figures, Anachronisms, Poor citations</div>
+                
+                <div class="label">My Tribe</div>
+                <div class="value">History Buffs, Debaters, Museum Enthusiasts</div>
+                
+                <div class="label">Embarrassing Moment</div>
+                <div class="value">Showed up to a Colonial reenactment in Victorian attire</div>
+                
+                <div class="label">Siblings</div>
+                <div class="value">Twin sister studying at Yale</div>
+                
+                <div class="label">Pets</div>
+                <div class="value">A cat named Benedict (yes, after Arnold)</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Latin, Old English (basic)</div>
+                
+                <div class="label">Announcement</div>
+                <div class="value">Organizing a historical walking tour of Cambridge!</div>
+                
+                <div class="label">Core Values</div>
+                <div class="value">Historical Accuracy, Critical Thinking, Public Education</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">American Revolution, Constitutional History, Archaeological Methods, Historical Research</div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">Historical Society President, Debate Team, Model UN</div>
+                
+                <div class="label">First Meal</div>
+                <div class="value">New England Clam Chowder</div>
+                
+                <div class="label">Health Tip</div>
+                <div class="value">Walk the Freedom Trail weekly - exercise and history combined!</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning archive research, afternoon museum visit, evening historical debate</div>
+                
+                <div class="label">Value in Friendship</div>
+                <div class="value">Intellectual discourse and shared passion for the past</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">A respected historian making history accessible to all</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Living in a historically rich city, access to archives, mentors</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">Massachusetts Historical Society</div>
+                
+                <div class="label">Passions</div>
+                <div class="value">American History, Archaeological Research, Public Speaking</div>
+                
+                <div class="label">Fictional Character</div>
+                <div class="value">Benjamin Gates from National Treasure - minus the conspiracy theories</div>
+                
+                <div class="label">Future Advice</div>
+                <div class="value">Those who don't study history are doomed to repeat it</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

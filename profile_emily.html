@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Rodriguez - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-dp {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Emily Rodriguez</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=10" alt="Emily Rodriguez" class="profile-dp">
+            <h1>Emily Rodriguez</h1>
+            <p>Pre-Med Biology • Class of 2024 • 21 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Emily Rodriguez</div>
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                <div class="label">Last Updated</div>
+                <div class="value">March 23, 2024</div>
+                <div class="label">Member Number</div>
+                <div class="value">#HAR2024010</div>
+                <div class="label">Referred By</div>
+                <div class="value">Anna Martinez</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Female</div>
+                <div class="label">Residence</div>
+                <div class="value">Dunster House</div>
+                <div class="label">Birthday</div>
+                <div class="value">07/28/2003</div>
+                <div class="label">Hometown</div>
+                <div class="value">Miami, FL</div>
+                <div class="label">Class of</div>
+                <div class="value">2024</div>
+                <div class="label">High School</div>
+                <div class="value">Coral Gables Senior High</div>
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                <div class="label">Elementary</div>
+                <div class="value">Sunset Elementary</div>
+                <div class="label">Zodiac</div>
+                <div class="value">Leo</div>
+                <div class="label">Psychic Profile</div>
+                <div class="value">Life Path Number: 1, Destiny Number: 5</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">erodriguez@harvard.edu</div>
+                <div class="label">Links</div>
+                <div class="value">premed.org/emilyrod<br>medicalresearch.net/erodriguez</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for</div>
+                <div class="value">Study Partners, Research Assistants, Volunteer Buddies</div>
+                
+                <div class="label">Relationship</div>
+                <div class="value">Single</div>
+                
+                <div class="label">Political Views</div>
+                <div class="value">Healthcare Progressive</div>
+                
+                <div class="label">Interests</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Medicine</span>
+                        <span class="interest-tag">Public Health</span>
+                        <span class="interest-tag">Neuroscience</span>
+                        <span class="interest-tag">Global Health</span>
+                        <span class="interest-tag">Medical Ethics</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Artists</div>
+                <div class="value">Bad Bunny, Shakira, Classical for Studying</div>
+                
+                <div class="label">Favorite Movies</div>
+                <div class="value">Patch Adams, Grey's Anatomy, The Good Doctor</div>
+                
+                <div class="label">Favorite Cuisine</div>
+                <div class="value">Cuban, Mediterranean, Health Food</div>
+                
+                <div class="label">Public Figures</div>
+                <div class="value">Dr. Fauci, Dr. Paul Farmer, Dr. Elizabeth Blackwell</div>
+                
+                <div class="label">Book Recommendations</div>
+                <div class="value">When Breath Becomes Air, Mountains Beyond Mountains, Being Mortal</div>
+                
+                <div class="label">Manifestations</div>
+                <div class="value">To open a clinic serving underserved communities</div>
+                
+                <div class="label">Future Aspirations</div>
+                <div class="value">Pediatric Neurosurgeon and Healthcare Advocate</div>
+                
+                <div class="label">Amazing Memory</div>
+                <div class="value">First time assisting in the emergency room</div>
+                
+                <div class="label">Causes</div>
+                <div class="value">Healthcare Access, Medical Education, Children's Health</div>
+                
+                <div class="label">Baby Picture</div>
+                <div class="value"><img src="https://i.pravatar.cc/150?img=20" class="profile-image" alt="Baby Emily"></div>
+                
+                <div class="label">Dislikes</div>
+                <div class="value">Healthcare inequality, All-nighters, Hospital jello</div>
+                
+                <div class="label">Most Used Emojis</div>
+                <div class="value">👩‍⚕️ 🧬 🏥 💉 ❤️</div>
+                
+                <div class="label">Favorite Sport</div>
+                <div class="value">Swimming, Tennis</div>
+                
+                <div class="label">Favorite Games</div>
+                <div class="value">Operation (ironically), Surgeon Simulator, Brain Age</div>
+                
+                <div class="label">Pet Peeves</div>
+                <div class="value">Medical misinformation, Messy handwriting, Late appointments</div>
+                
+                <div class="label">My Tribe</div>
+                <div class="value">Pre-med Students, Healthcare Volunteers, Future Doctors</div>
+                
+                <div class="label">Embarrassing Moment</div>
+                <div class="value">Put scrubs on backwards during first hospital rotation</div>
+                
+                <div class="label">Siblings</div>
+                <div class="value">Twin brother studying Law at Columbia</div>
+                
+                <div class="label">Pets</div>
+                <div class="value">A rescue cat named Hippocrates</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Spanish, Medical Latin</div>
+                
+                <div class="label">Announcement</div>
+                <div class="value">Starting a medical outreach program for local schools!</div>
+                
+                <div class="label">Core Values</div>
+                <div class="value">Compassion, Excellence, Health Equity</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">Human Anatomy, Biochemistry, Neurobiology, Medical Ethics</div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">Pre-Med Society President, Global Health Initiative, Medical Volunteers</div>
+                
+                <div class="label">First Meal</div>
+                <div class="value">Overnight oats with fresh fruit</div>
+                
+                <div class="label">Health Tip</div>
+                <div class="value">Sleep is not optional - even for pre-med students!</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning rounds, afternoon research, evening volunteer clinic</div>
+                
+                <div class="label">Value in Friendship</div>
+                <div class="value">Supporting each other through the medical journey</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">A compassionate doctor making healthcare accessible to all</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Medical mentors, clinical opportunities, supportive family</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The Mass General Hospital Learning Lab</div>
+                
+                <div class="label">Passions</div>
+                <div class="value">Pediatric Medicine, Neuroscience Research, Healthcare Advocacy</div>
+                
+                <div class="label">Fictional Character</div>
+                <div class="value">Dr. Christina Yang - brilliant but with more bedside manner</div>
+                
+                <div class="label">Future Advice</div>
+                <div class="value">Treat the patient, not just the disease</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

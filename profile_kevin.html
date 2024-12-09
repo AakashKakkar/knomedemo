@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Lee - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-dp {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Kevin Lee</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=8" alt="Kevin Lee" class="profile-dp">
+            <h1>Kevin Lee</h1>
+            <p>Computer Science • Class of 2025 • 20 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Kevin Lee</div>
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                <div class="label">Last Updated</div>
+                <div class="value">March 21, 2024</div>
+                <div class="label">Member Number</div>
+                <div class="value">#HAR2024008</div>
+                <div class="label">Referred By</div>
+                <div class="value">Lisa Park</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Male</div>
+                <div class="label">Residence</div>
+                <div class="value">Leverett House</div>
+                <div class="label">Birthday</div>
+                <div class="value">09/23/2003</div>
+                <div class="label">Hometown</div>
+                <div class="value">Seattle, WA</div>
+                <div class="label">Class of</div>
+                <div class="value">2025</div>
+                <div class="label">High School</div>
+                <div class="value">Lakeside School</div>
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                <div class="label">Elementary</div>
+                <div class="value">Medina Elementary</div>
+                <div class="label">Zodiac</div>
+                <div class="value">Libra</div>
+                <div class="label">Psychic Profile</div>
+                <div class="value">Life Path Number: 8, Destiny Number: 4</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Favorite Sport</div>
+                <div class="value">E-sports, Basketball</div>
+                
+                <div class="label">Favorite Games</div>
+                <div class="value">League of Legends, Valorant, Minecraft</div>
+                
+                <div class="label">Pet Peeves</div>
+                <div class="value">Unindented code, Missing semicolons, Merge conflicts</div>
+                
+                <div class="label">My Tribe</div>
+                <div class="value">Developers, Gamers, Tech Enthusiasts</div>
+                
+                <div class="label">Embarrassing Moment</div>
+                <div class="value">Deployed to production with console.log statements</div>
+                
+                <div class="label">Siblings</div>
+                <div class="value">Younger sister in high school</div>
+                
+                <div class="label">Pets</div>
+                <div class="value">A mechanical keyboard collection (they're like pets)</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Korean, Python, JavaScript, Rust</div>
+                
+                <div class="label">Announcement</div>
+                <div class="value">Building a new AI-powered study tool!</div>
+                
+                <div class="label">Core Values</div>
+                <div class="value">Innovation, Efficiency, Open Source</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">Advanced Algorithms, Machine Learning, Systems Programming, Database Design</div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">Coding Club President, Blockchain Society, Gaming Team</div>
+                
+                <div class="label">First Meal</div>
+                <div class="value">Energy drink and protein bar</div>
+                
+                <div class="label">Health Tip</div>
+                <div class="value">Take screen breaks every 50 minutes</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning coding, afternoon hackathon, evening gaming session</div>
+                
+                <div class="label">Value in Friendship</div>
+                <div class="value">Collaborative problem-solving and shared tech passion</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">A tech innovator making AI accessible to everyone</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">High-speed internet, mechanical keyboards, supportive tech community</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The Harvard Innovation Lab</div>
+                
+                <div class="label">Passions</div>
+                <div class="value">AI Development, Competitive Gaming, Tech Entrepreneurship</div>
+                
+                <div class="label">Fictional Character</div>
+                <div class="value">Tony Stark - minus the ego, plus more coding</div>
+                
+                <div class="label">Future Advice</div>
+                <div class="value">Code like someone will maintain it. That someone is you.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

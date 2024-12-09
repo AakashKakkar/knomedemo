@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Know.me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">know.me</div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="register-container">
+            <h2>To register for know.me, just fill in the four fields below.</h2>
+            <p class="subtitle">You will have a chance to enter additional information and submit a picture once you have registered.</p>
+            
+            <form class="register-form" id="registerForm" action="welcome.html" method="GET">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" required>
+                        <option value="">Select your status</option>
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">School</label>
+                    <select id="school" name="school" required>
+                        <option value="">Select your school</option>
+                        <option value="brown">Brown University</option>
+                        <option value="columbia">Columbia University</option>
+                        <option value="cornell">Cornell University</option>
+                        <option value="dartmouth">Dartmouth College</option>
+                        <option value="harvard">Harvard University</option>
+                        <option value="penn">University of Pennsylvania</option>
+                        <option value="princeton">Princeton University</option>
+                        <option value="yale">Yale University</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">School Email</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="yourname@school.edu">
+                </div>
+
+                <button type="submit" class="cta-button register-button">Register Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Safety Center</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Know.me. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

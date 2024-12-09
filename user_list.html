@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>know.me@Harvard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="user_list.css">
+    <style>
+        /* Bottom Navigation Styles */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-item.active {
+            color: #0066cc;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        /* Adjust main content to account for bottom nav */
+        .user-list {
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">know.me@Harvard</div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search people...">
+    </div>
+
+    <div class="user-list">
+        <!-- Sarah Johnson -->
+        <a href="profile_sarah.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=1" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Sarah Johnson</h2>
+                <p>Computer Science • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- Michael Chen -->
+        <a href="profile_michael.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=2" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Michael Chen</h2>
+                <p>Economics • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+
+        <!-- Emily Rodriguez -->
+        <a href="profile_emily.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=3" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Emily Rodriguez</h2>
+                <p>Biology • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- James Wilson -->
+        <a href="profile_james.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=4" alt="Profile Picture">
+            <div class="user-details">
+                <h2>James Wilson</h2>
+                <p>Physics • Class of 2023 • 22 years</p>
+            </div>
+        </a>
+
+        <!-- Lisa Park -->
+        <a href="profile_lisa.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Lisa Park</h2>
+                <p>Mathematics • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- David Thompson -->
+        <a href="profile_david.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=6" alt="Profile Picture">
+            <div class="user-details">
+                <h2>David Thompson</h2>
+                <p>History • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+
+        <!-- Anna Martinez -->
+        <a href="profile_anna.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=7" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Anna Martinez</h2>
+                <p>Psychology • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- Kevin Lee -->
+        <a href="profile_kevin.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=8" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Kevin Lee</h2>
+                <p>Engineering • Class of 2023 • 22 years</p>
+            </div>
+        </a>
+
+        <!-- Rachel Brown -->
+        <a href="profile_rachel.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=9" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Rachel Brown</h2>
+                <p>Chemistry • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+
+        <!-- Thomas Anderson -->
+        <a href="profile_thomas.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=10" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Thomas Anderson</h2>
+                <p>Philosophy • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- Sarah Johnson -->
+        <a href="profile_sarah2.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=13" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Sarah Johnson</h2>
+                <p>Art History • Class of 2024 • 22 years</p>
+            </div>
+        </a>
+
+        <!-- James Wilson -->
+        <a href="profile_aakash.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=14" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Aakash Kakkar</h2>
+                <p>Physics • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+
+        <!-- Maria Garcia -->
+        <a href="profile_maria.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=15" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Maria Garcia</h2>
+                <p>International Relations • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- David Kim -->
+        <a href="profile_davidkim.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=16" alt="Profile Picture">
+            <div class="user-details">
+                <h2>David Kim</h2>
+                <p>Mathematics • Class of 2025 • 19 years</p>
+            </div>
+        </a>
+
+        <!-- Lisa Patel -->
+        <a href="profile_lisapatel.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=17" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Lisa Patel</h2>
+                <p>Neuroscience • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- Alex Thompson -->
+        <a href="profile_alex.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=18" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Alex Thompson</h2>
+                <p>Music • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+
+        <!-- Sophie Williams -->
+        <a href="profile_sophie.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=19" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Sophie Williams</h2>
+                <p>Chemistry • Class of 2024 • 22 years</p>
+            </div>
+        </a>
+
+        <!-- Daniel Nguyen -->
+        <a href="profile_daniel.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=20" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Daniel Nguyen</h2>
+                <p>Political Science • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+
+        <!-- Olivia Taylor -->
+        <a href="profile_olivia.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=21" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Olivia Taylor</h2>
+                <p>Literature • Class of 2024 • 21 years</p>
+            </div>
+        </a>
+
+        <!-- Ryan Jackson -->
+        <a href="profile_ryan.html" class="user-item">
+            <img src="https://i.pravatar.cc/150?img=22" alt="Profile Picture">
+            <div class="user-details">
+                <h2>Ryan Jackson</h2>
+                <p>Engineering • Class of 2025 • 20 years</p>
+            </div>
+        </a>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <div class="nav-icon">🙋‍♀️</div>
+            <span>User List</span>
+        </a>
+        <a href="visual_network.html" class="nav-item">
+            <div class="nav-icon">🌐</div>
+            <span>Visual Network</span>
+        </a>
+        <a href="my_profile.html" class="nav-item">
+            <div class="nav-icon">🫵</div>
+            <span>My Profile</span>
+        </a>
+    </nav>
+
+    <script>
+        // Add this to your existing script
+        function updateNavActive(clickedNav) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            clickedNav.classList.add('active');
+        }
+
+        // Add click handlers to nav items
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (!this.href.includes('my_profile.html') && !this.href.includes('visual_network.html')) {
+                    e.preventDefault();
+                    updateNavActive(this);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

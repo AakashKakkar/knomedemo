@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Johnson - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+        }
+
+        .profile-header {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Sarah Johnson</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=1" alt="Sarah Johnson" class="profile-dp">
+            <h1>Sarah Johnson</h1>
+            <p>Computer Science • Class of 2024</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Sarah Johnson</div>
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                <div class="label">Last Updated</div>
+                <div class="value">March 15, 2024</div>
+                <div class="label">Member Number</div>
+                <div class="value">#HAR2024001</div>
+                <div class="label">Referred By</div>
+                <div class="value">Emily Rodriguez</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Female</div>
+                <div class="label">Residence</div>
+                <div class="value">Adams House</div>
+                <div class="label">Birthday</div>
+                <div class="value">04/15/2003</div>
+                <div class="label">Hometown</div>
+                <div class="value">Seattle, WA</div>
+                <div class="label">Class of</div>
+                <div class="value">2024</div>
+                <div class="label">High School</div>
+                <div class="value">Lakeside School</div>
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                <div class="label">Elementary</div>
+                <div class="value">Cascadia Elementary</div>
+                <div class="label">Zodiac</div>
+                <div class="value">Aries</div>
+                <div class="label">Psychic Profile</div>
+                <div class="value">Life Path Number: 7, Destiny Number: 3</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">sjohnson@harvard.edu</div>
+                <div class="label">Links</div>
+                <div class="value">github.com/sarahj<br>linkedin.com/in/sarahjohnson</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for</div>
+                <div class="value">Study Mate, Project Partner, Friendship</div>
+                
+                <div class="label">Relationship</div>
+                <div class="value">Single</div>
+                
+                <div class="label">Political Views</div>
+                <div class="value">Progressive</div>
+                
+                <div class="label">Interests</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">AI/ML</span>
+                        <span class="interest-tag">Hiking</span>
+                        <span class="interest-tag">Photography</span>
+                        <span class="interest-tag">Piano</span>
+                        <span class="interest-tag">Rock Climbing</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Artists</div>
+                <div class="value">Taylor Swift, The Weeknd, Coldplay</div>
+                
+                <div class="label">Favorite Movies</div>
+                <div class="value">Inception, The Social Network, Interstellar</div>
+                
+                <div class="label">Favorite Cuisine</div>
+                <div class="value">Japanese, Italian, Thai</div>
+                
+                <div class="label">Public Figures</div>
+                <div class="value">Michelle Obama, Elon Musk, Jane Goodall</div>
+                
+                <div class="label">Book Recommendations</div>
+                <div class="value">Atomic Habits, Sapiens, The Code Breaker</div>
+                
+                <div class="label">Manifestations</div>
+                <div class="value">To create AI solutions that help solve climate change</div>
+                
+                <div class="label">Future Aspirations</div>
+                <div class="value">AI Researcher and Entrepreneur</div>
+                
+                <div class="label">Amazing Memory</div>
+                <div class="value">Winning the National Science Fair in high school</div>
+                
+                <div class="label">Causes</div>
+                <div class="value">Climate Action, Education Access, Mental Health</div>
+                
+                <div class="label">Baby Picture</div>
+                <div class="value"><img src="https://i.pravatar.cc/150?img=1" class="profile-image" alt="Baby Sarah"></div>
+                
+                <div class="label">Dislikes</div>
+                <div class="value">Procrastination, Loud chewing, Small talk</div>
+                
+                <div class="label">Most Used Emojis</div>
+                <div class="value">😊 🤓 💻 🌱 ✨</div>
+                
+                <div class="label">Favorite Sport</div>
+                <div class="value">Rock Climbing, Tennis</div>
+                
+                <div class="label">Favorite Games</div>
+                <div class="value">Chess, Minecraft, The Legend of Zelda</div>
+                
+                <div class="label">Pet Peeves</div>
+                <div class="value">Unmuted microphones, Late arrivals, Unorganized code</div>
+                
+                <div class="label">My Tribe</div>
+                <div class="value">Tech enthusiasts, Environmental activists, Musicians</div>
+                
+                <div class="label">Embarrassing Moment</div>
+                <div class="value">Calling my professor 'mom' during a lecture</div>
+                
+                <div class="label">Siblings</div>
+                <div class="value">1 younger brother</div>
+                
+                <div class="label">Pets</div>
+                <div class="value">A golden retriever named Binary</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Mandarin (intermediate), Python 😉</div>
+                
+                <div class="label">Announcement</div>
+                <div class="value">Looking for teammates for the upcoming hackathon!</div>
+                
+                <div class="label">Core Values</div>
+                <div class="value">Innovation, Integrity, Environmental Responsibility</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">CS50, Advanced Machine Learning, Data Structures, Algorithms, Ethics in AI</div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">Women in Tech, Environmental Action Committee, Coding Club Lead</div>
+                
+                <div class="label">First Meal</div>
+                <div class="value">Overnight oats with berries and honey</div>
+                
+                <div class="label">Health Tip</div>
+                <div class="value">Take walking meetings instead of sitting ones</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day</div>
+                <div class="value">Coding in a cafe, afternoon hike, evening jam session with friends</div>
+                
+                <div class="label">Value in Friendship</div>
+                <div class="value">Authenticity and growth-oriented conversations</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">Someone who makes a positive impact through technology</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Education opportunities, supportive family, technology access</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">Mount Rainier National Park</div>
+                
+                <div class="label">Passions</div>
+                <div class="value">Artificial Intelligence, Environmental Conservation, Music</div>
+                
+                <div class="label">Fictional Character</div>
+                <div class="value">Hermione Granger - smart, determined, and fighting for what's right</div>
+                
+                <div class="label">Future Advice</div>
+                <div class="value">Don't be afraid to fail big while trying to innovate</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

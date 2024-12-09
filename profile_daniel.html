@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Nguyen - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Daniel Nguyen</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=68" alt="Daniel Nguyen" class="profile-dp">
+            <h1>Daniel Nguyen</h1>
+            <p>Computer Engineering • Class of 2024 • 21 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Daniel Nguyen</div>
+                
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                
+                <div class="label">Last Updated</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number</div>
+                <div class="value">#CENG2024011</div>
+                
+                <div class="label">Referred By</div>
+                <div class="value">Alex Thompson</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Male</div>
+                
+                <div class="label">Residence</div>
+                <div class="value">Winthrop House</div>
+                
+                <div class="label">Birthday</div>
+                <div class="value">05/15/2003</div>
+                
+                <div class="label">Hometown</div>
+                <div class="value">San Jose, California</div>
+                
+                <div class="label">Class of</div>
+                <div class="value">2024</div>
+                
+                <div class="label">High School</div>
+                <div class="value">Lynbrook High School</div>
+                
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                
+                <div class="label">Elementary</div>
+                <div class="value">Muir Elementary School</div>
+                
+                <div class="label">Zodiac</div>
+                <div class="value">Taurus</div>
+                
+                <div class="label">Engineering Focus</div>
+                <div class="value">Specializing in Embedded Systems and Robotics</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">dnguyen@harvard.edu</div>
+                
+                <div class="label">Links</div>
+                <div class="value">
+                    engineering.harvard.edu/people/daniel-nguyen<br>
+                    github.com/danielnguyen<br>
+                    linkedin.com/in/danielnguyen-engineering
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Engineering Focus</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Embedded Systems</span>
+                        <span class="interest-tag">Robotics</span>
+                        <span class="interest-tag">IoT</span>
+                        <span class="interest-tag">Machine Learning</span>
+                        <span class="interest-tag">Hardware Design</span>
+                    </div>
+                </div>
+
+                <div class="label">Current Projects</div>
+                <div class="value">
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Autonomous Drone</h3>
+                            <p>Developing navigation algorithms for drones</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Smart Home System</h3>
+                            <p>Creating IoT solutions for home automation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="label">Research Work</div>
+                <div class="value">
+                    - Harvard Robotics Lab Intern<br>
+                    - Research Assistant in Embedded Systems<br>
+                    - IEEE Student Member
+                </div>
+
+                <div class="label">Favorite Technologies</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Arduino</span>
+                        <span class="interest-tag">Raspberry Pi</span>
+                        <span class="interest-tag">TensorFlow</span>
+                        <span class="interest-tag">ROS</span>
+                    </div>
+                </div>
+                
+                <div class="label">Engineering Books</div>
+                <div class="value">
+                    - "The Art of Electronics" by Horowitz and Hill<br>
+                    - "Introduction to Robotics" by John J. Craig<br>
+                    - "Embedded Systems Design" by Steve Heath
+                </div>
+                
+                <div class="label">Favorite Labs</div>
+                <div class="value">Harvard Robotics Lab, MIT Media Lab, Stanford AI Lab</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Vietnamese, C++, Python</div>
+                
+                <div class="label">Engineering Tools</div>
+                <div class="value">MATLAB, Simulink, SolidWorks, Eagle</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">ENGR 50: Introduction to Embedded Systems</span>
+                        <span class="interest-tag">CS 182: Artificial Intelligence</span>
+                        <span class="interest-tag">ENGR 100: Robotics</span>
+                        <span class="interest-tag">CS 143: Computer Vision</span>
+                    </div>
+                </div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">
+                    - Harvard Robotics Club (President)<br>
+                    - IEEE Student Branch<br>
+                    - HackHarvard Organizer<br>
+                    - Engineering Society
+                </div>
+                
+                <div class="label">Study Spots</div>
+                <div class="value">
+                    - Maxwell Dworkin Lab<br>
+                    - Winthrop House Study Room<br>
+                    - Science Center
+                </div>
+                
+                <div class="label">Campus Job</div>
+                <div class="value">Teaching Assistant for Embedded Systems, Lab Assistant in Robotics Lab</div>
+                
+                <div class="label">Office Hours</div>
+                <div class="value">Thursdays 4-6 PM @ Maxwell Dworkin</div>
+
+                <div class="label">Hackathons</div>
+                <div class="value">
+                    - Winner of HackHarvard 2023<br>
+                    - Finalist at MIT Hackathon<br>
+                    - Participant in YaleHacks
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Engineering Journey</div>
+                <div class="value">Started building robots in high school, interned at tech companies, now leading projects in embedded systems and robotics</div>
+                
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning coding session, afternoon lab work, evening robotics club meeting, late-night hackathon prep</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">Lead Engineer in Robotics, Innovator in IoT solutions</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Supportive engineering community, access to cutting-edge labs, mentorship from industry leaders</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The Robotics Lab - where ideas come to life</div>
+                
+                <div class="label">Life Motto</div>
+                <div class="value">"Innovate, Iterate, Inspire"</div>
+                
+                <div class="label">Best Memory</div>
+                <div class="value">Winning my first hackathon with a team of amazing friends</div>
+                
+                <div class="label">Dream Project</div>
+                <div class="value">Developing a fully autonomous drone delivery system</div>
+                
+                <div class="label">Fun Fact</div>
+                <div class="value">I built my first robot at age 12 and it still works! 🤖</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

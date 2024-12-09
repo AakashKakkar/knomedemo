@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Network</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #667eea;
+            font-size: 24px;
+            line-height: 1;
+            padding: 8px;
+            margin: -8px;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: rgba(102, 126, 234, 0.1);
+        }
+
+        .page-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        #network-container {
+            flex: 1;
+            background: white;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #666;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            padding: 4px 0;
+            width: 33.33%;
+            transition: color 0.2s;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active {
+            color: #007AFF;
+        }
+
+        .nav-item:hover {
+            color: #007AFF;
+        }
+
+        /* Loading indicator styles */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Network node hover styles */
+        .vis-network:hover {
+            cursor: grab;
+        }
+
+        .vis-network:active {
+            cursor: grabbing;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            #network-container {
+                margin: 5px;
+            }
+
+            .nav-item {
+                font-size: 10px;
+            }
+
+            .nav-icon {
+                font-size: 18px;
+            }
+
+            .header {
+                padding: 12px 16px;
+            }
+
+            .page-title {
+                font-size: 16px;
+            }
+        }
+
+        /* Network tooltip styles */
+        .vis-tooltip {
+            position: absolute;
+            background-color: white;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Network manipulation styles */
+        .vis-manipulation {
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 8px;
+        }
+
+        /* Network navigation controls */
+        .vis-navigation {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .vis-button {
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            width: 32px;
+            height: 32px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .vis-button:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Network edge styles */
+        .vis-network .vis-edge {
+            stroke-width: 2px;
+        }
+
+        .vis-network .vis-edge:hover {
+            stroke-width: 3px;
+        }
+
+        .node-tooltip {
+            position: absolute;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            pointer-events: none;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .tooltip-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tooltip-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #667eea;
+        }
+
+        .tooltip-info {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .tooltip-info span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        #network-container {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .vis-network:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.05) 100%);
+        }
+
+        .zoom-controls {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 1000;
+        }
+
+        .zoom-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: none;
+            background: white;
+            color: #667eea;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+
+        .zoom-button:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .zoom-button:active {
+            transform: scale(0.95);
+        }
+
+        #loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="page-title">Visual Network</div>
+    </div>
+
+    <div id="network-container"></div>
+
+    <!-- <nav class="bottom-nav">
+        <a href="user_list.html" class="nav-item">
+            <div class="nav-icon">🙋‍♀️</div>
+            <span>User List</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <div class="nav-icon">🌐</div>
+            <span>Visual Network</span>
+        </a>
+        <a href="my_profile.html" class="nav-item">
+            <div class="nav-icon">🫵</div>
+            <span>My Profile</span>
+        </a>
+    </nav> -->
+
+    <div id="loading-indicator" style="display: none;">
+        Loading network...
+    </div>
+
+    <script>
+        // Network data with correct image paths
+        const nodes = new vis.DataSet([
+            { 
+                id: 1, 
+                label: 'Me', 
+                image: 'https://i.pravatar.cc/300?img=13', 
+                shape: 'circularImage', 
+                size: 30 
+            },
+            { 
+                id: 2, 
+                label: 'Alex Thompson', 
+                image: 'https://i.pravatar.cc/300?img=33', 
+                shape: 'circularImage', 
+                size: 25, 
+                url: 'profile_alex.html' 
+            },
+            { 
+                id: 3, 
+                label: 'Sophie Williams', 
+                image: 'https://i.pravatar.cc/300?img=5', 
+                shape: 'circularImage', 
+                size: 25, 
+                url: 'profile_sophie.html' 
+            },
+            { 
+                id: 4, 
+                label: 'Daniel Nguyen', 
+                image: 'https://i.pravatar.cc/300?img=11', 
+                shape: 'circularImage', 
+                size: 25, 
+                url: 'profile_daniel.html' 
+            },
+            { 
+                id: 5, 
+                label: 'Olivia Taylor', 
+                image: 'https://i.pravatar.cc/300?img=9', 
+                shape: 'circularImage', 
+                size: 25, 
+                url: 'profile_olivia.html' 
+            },
+            { 
+                id: 6, 
+                label: 'Ryan Jackson', 
+                image: 'https://i.pravatar.cc/300?img=12', 
+                shape: 'circularImage', 
+                size: 25, 
+                url: 'profile_ryan.html' 
+            },
+            // Special cases
+            { 
+                id: 7, 
+                label: 'David Kim', 
+                image: 'https://i.pravatar.cc/300?img=15', 
+                shape: 'circularImage', 
+                size: 20, 
+                url: 'profile_davidkim.html' 
+            },
+            { 
+                id: 8, 
+                label: 'Lisa Patel', 
+                image: 'https://i.pravatar.cc/300?img=16', 
+                shape: 'circularImage', 
+                size: 20, 
+                url: 'profile_lisapatel.html' 
+            },
+            { 
+                id: 9, 
+                label: 'Sarah', 
+                image: 'https://i.pravatar.cc/300?img=17', 
+                shape: 'circularImage', 
+                size: 20, 
+                url: 'profile_sarah2.html' 
+            }
+        ]);
+
+        // Define connections
+        const edges = new vis.DataSet([
+            { from: 1, to: 2 },  // Me - Alex
+            { from: 1, to: 3 },  // Me - Sophie
+            { from: 1, to: 4 },  // Me - Daniel
+            { from: 1, to: 5 },  // Me - Olivia
+            { from: 1, to: 6 },  // Me - Ryan
+            { from: 2, to: 3 },  // Alex - Sophie
+            { from: 3, to: 4 },  // Sophie - Daniel
+            { from: 4, to: 5 },  // Daniel - Olivia
+            { from: 5, to: 6 },  // Olivia - Ryan
+            { from: 2, to: 7 },  // Alex - Emma
+            { from: 3, to: 8 },  // Sophie - Michael
+            { from: 4, to: 9 },  // Daniel - Sarah
+            { from: 5, to: 10 }, // Olivia - James
+        ]);
+
+        // Network configuration
+        const options = {
+            nodes: {
+                borderWidth: 3,
+                borderWidthSelected: 4,
+                brokenImage: undefined,
+                chosen: true,
+                font: {
+                    color: '#333',
+                    size: 16,
+                    face: 'system-ui',
+                    strokeWidth: 2,
+                    strokeColor: '#ffffff',
+                    bold: {
+                        color: '#333',
+                        size: 16,
+                        face: 'system-ui',
+                        mod: 'bold'
+                    }
+                },
+                shadow: {
+                    enabled: true,
+                    color: 'rgba(0,0,0,0.2)',
+                    size: 8,
+                    x: 2,
+                    y: 2
+                },
+                size: 30,
+                color: {
+                    border: '#667eea',
+                    background: '#ffffff',
+                    highlight: {
+                        border: '#764ba2',
+                        background: '#ffffff'
+                    },
+                    hover: {
+                        border: '#764ba2',
+                        background: '#ffffff'
+                    }
+                }
+            },
+            edges: {
+                width: 2,
+                color: {
+                    color: '#667eea',
+                    opacity: 0.3,
+                    highlight: '#764ba2',
+                    hover: '#764ba2'
+                },
+                smooth: {
+                    type: 'continuous',
+                    roundness: 0.5
+                },
+                hoverWidth: 3,
+                selectionWidth: 3,
+                arrows: {
+                    to: {
+                        enabled: false
+                    }
+                },
+                shadow: {
+                    enabled: true,
+                    color: 'rgba(0,0,0,0.2)',
+                    size: 5,
+                    x: 2,
+                    y: 2
+                }
+            },
+            physics: {
+                enabled: true,
+                barnesHut: {
+                    gravitationalConstant: -30000,
+                    centralGravity: 0.3,
+                    springLength: 200,
+                    springConstant: 0.04,
+                    damping: 0.09
+                },
+                stabilization: {
+                    enabled: true,
+                    iterations: 1000,
+                    updateInterval: 100,
+                    fit: true
+                }
+            },
+            interaction: {
+                hover: true,
+                hoverConnectedEdges: true,
+                selectConnectedEdges: true,
+                navigationButtons: true,
+                keyboard: true,
+                tooltipDelay: 200,
+                zoomView: true,
+                dragView: true,
+                zoomSpeed: 0.5,          // Slower zoom for better control
+                minZoom: 0.2,           // Maximum zoom out
+                maxZoom: 2.0            // Maximum zoom in
+            }
+        };
+
+        // Create network
+        const container = document.getElementById('network-container');
+        const data = { nodes, edges };
+        const network = new vis.Network(container, data, options);
+
+        // Show loading indicator
+        document.getElementById('loading-indicator').style.display = 'block';
+        
+        // Hide when network is ready
+        network.once('stabilized', function() {
+            document.getElementById('loading-indicator').style.display = 'none';
+        });
+
+        // Handle node clicks with correct URLs
+        network.on('click', function(params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                const clickedNode = nodes.get(nodeId);
+                
+                // Don't navigate if clicking on "Me" node
+                if (nodeId === 1) return;
+
+                // Navigate to the profile URL
+                if (clickedNode.url) {
+                    window.location.href = clickedNode.url;
+                }
+            }
+        });
+
+        // Add hover effects
+        network.on('hoverNode', function(params) {
+            const node = nodes.get(params.node);
+            container.style.cursor = 'pointer';
+            
+            // Create and show tooltip
+            const tooltip = document.createElement('div');
+            tooltip.className = 'node-tooltip';
+            tooltip.innerHTML = `
+                <div class="tooltip-content">
+                    <img src="${node.image}" alt="${node.label}" class="tooltip-image">
+                    <div class="tooltip-info">
+                        <strong>${node.label}</strong>
+                        ${node.id !== 1 ? '<br><span>Click to view profile</span>' : ''}
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(tooltip);
+            
+            // Position tooltip near mouse
+            tooltip.style.left = params.event.center.x + 10 + 'px';
+            tooltip.style.top = params.event.center.y + 10 + 'px';
+        });
+
+        // Clean up tooltips on blur
+        network.on('blurNode', function(params) {
+            container.style.cursor = 'default';
+            const tooltips = document.querySelectorAll('.node-tooltip');
+            tooltips.forEach(tooltip => tooltip.remove());
+        });
+
+        // Add zoom controls
+        network.on('zoom', function(params) {
+            const scale = network.getScale();
+            
+            // Update node sizes based on zoom level
+            nodes.forEach((node) => {
+                const baseSize = node.id === 1 ? 30 : 25; // Larger size for 'Me' node
+                const updatedNode = {
+                    id: node.id,
+                    size: baseSize / scale
+                };
+                nodes.update(updatedNode);
+            });
+
+            // Update font sizes based on zoom level
+            const baseFontSize = 16;
+            const newFontSize = Math.min(baseFontSize / scale, 20); // Cap maximum font size
+            network.setOptions({
+                nodes: {
+                    font: {
+                        size: newFontSize
+                    }
+                }
+            });
+        });
+
+        // Add mouse wheel zoom handler for smoother zooming
+        container.addEventListener('wheel', function(event) {
+            if (event.deltaY < 0) {
+                network.zoomIn();
+            } else {
+                network.zoomOut();
+            }
+        });
+
+        // Add zoom controls to the container
+        const zoomControls = document.createElement('div');
+        zoomControls.className = 'zoom-controls';
+        zoomControls.innerHTML = `
+            <button class="zoom-button" onclick="network.zoomIn()">+</button>
+            <button class="zoom-button" onclick="network.zoomOut()">−</button>
+        `;
+        container.appendChild(zoomControls);
+    </script>
+</body>
+</html>

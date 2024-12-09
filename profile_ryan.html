@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Jackson - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                color: #666;
+                font-size: 12px;
+                margin-bottom: -4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Ryan Jackson</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://pbs.twimg.com/profile_images/1339980022271127552/YFuF5dQu_400x400.jpg" alt="Ryan Jackson" class="profile-dp">
+            <h1>Ryan Jackson</h1>
+            <p>Psychology • Class of 2024 • 21 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Ryan Jackson</div>
+                
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                
+                <div class="label">Last Updated</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number</div>
+                <div class="value">#PSY2024013</div>
+                
+                <div class="label">Referred By</div>
+                <div class="value">Daniel Nguyen</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Male</div>
+                
+                <div class="label">Residence</div>
+                <div class="value">Quincy House</div>
+                
+                <div class="label">Birthday</div>
+                <div class="value">11/03/2003</div>
+                
+                <div class="label">Hometown</div>
+                <div class="value">Chicago, Illinois</div>
+                
+                <div class="label">Class of</div>
+                <div class="value">2024</div>
+                
+                <div class="label">High School</div>
+                <div class="value">Whitney M. Young Magnet High School</div>
+                
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                
+                <div class="label">Elementary</div>
+                <div class="value">Skinner North Classical School</div>
+                
+                <div class="label">Zodiac</div>
+                <div class="value">Scorpio</div>
+                
+                <div class="label">Research Focus</div>
+                <div class="value">Cognitive Psychology and Decision Making</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">rjackson@harvard.edu</div>
+                
+                <div class="label">Links</div>
+                <div class="value">
+                    psychology.harvard.edu/people/ryan-jackson<br>
+                    researchgate.net/ryanjackson<br>
+                    linkedin.com/in/ryanjackson-psych
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Research Areas</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Cognitive Psychology</span>
+                        <span class="interest-tag">Decision Making</span>
+                        <span class="interest-tag">Social Psychology</span>
+                        <span class="interest-tag">Behavioral Economics</span>
+                        <span class="interest-tag">Memory Studies</span>
+                    </div>
+                </div>
+
+                <div class="label">Current Projects</div>
+                <div class="value">
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Decision Making Study</h3>
+                            <p>Research on cognitive biases in financial decisions</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Memory and Learning</h3>
+                            <p>Investigating effective study techniques</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="label">Lab Work</div>
+                <div class="value">
+                    - Research Assistant in Cognitive Psychology Lab<br>
+                    - Harvard Decision Science Laboratory<br>
+                    - Social Psychology Research Team
+                </div>
+
+                <div class="label">Research Methods</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">fMRI Studies</span>
+                        <span class="interest-tag">Eye Tracking</span>
+                        <span class="interest-tag">Survey Design</span>
+                        <span class="interest-tag">Statistical Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Books</div>
+                <div class="value">
+                    - "Thinking, Fast and Slow" by Daniel Kahneman<br>
+                    - "Predictably Irrational" by Dan Ariely<br>
+                    - "The Man Who Mistook His Wife for a Hat" by Oliver Sacks
+                </div>
+                
+                <div class="label">Research Areas</div>
+                <div class="value">Decision Science Lab, Psychology Department, Center for Brain Science</div>
+                
+                <div class="label">Languages</div>
+                <div class="value">English, Spanish, SPSS, R Programming</div>
+                
+                <div class="label">Research Tools</div>
+                <div class="value">EEG, Eye Trackers, Statistical Software, Survey Platforms</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">PSY 1401: Cognitive Psychology</span>
+                        <span class="interest-tag">PSY 1950: Decision Making</span>
+                        <span class="interest-tag">STAT 104: Quantitative Methods</span>
+                        <span class="interest-tag">PSY 1900: Research Methods</span>
+                    </div>
+                </div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">
+                    - Harvard Psychology Association (President)<br>
+                    - Behavioral Economics Club<br>
+                    - Mental Health Advocacy Program<br>
+                    - Research Methods Society
+                </div>
+                
+                <div class="label">Study Spots</div>
+                <div class="value">
+                    - William James Hall Library<br>
+                    - Quincy House Study Room<br>
+                    - Psychology Department Lounge
+                </div>
+                
+                <div class="label">Campus Job</div>
+                <div class="value">Research Assistant in Cognitive Lab, Teaching Fellow for Intro Psychology</div>
+                
+                <div class="label">Office Hours</div>
+                <div class="value">Wednesdays 3-5 PM @ William James Hall</div>
+
+                <div class="label">Research Experience</div>
+                <div class="value">
+                    - Summer Research Program at Harvard<br>
+                    - Psychology Lab Manager<br>
+                    - Undergraduate Research Assistant
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Psychology Journey</div>
+                <div class="value">Started with an interest in human behavior, discovered passion for cognitive psychology through research experience</div>
+                
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning research sessions, afternoon data analysis, evening psychology club meetings</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">Research Psychologist studying decision-making processes and cognitive biases</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Access to advanced research facilities, mentorship from leading psychologists, collaborative research environment</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The Decision Science Laboratory during experiments</div>
+                
+                <div class="label">Life Motto</div>
+                <div class="value">"Understanding the mind to improve human decisions"</div>
+                
+                <div class="label">Best Memory</div>
+                <div class="value">Publishing my first research paper in cognitive psychology</div>
+                
+                <div class="label">Dream Project</div>
+                <div class="value">Developing interventions to improve decision-making in high-stakes situations</div>
+                
+                <div class="label">Fun Fact</div>
+                <div class="value">I can explain cognitive biases using only emoji! 🧠💭</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

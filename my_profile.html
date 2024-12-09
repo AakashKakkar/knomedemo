@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Editor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .edit-button {
+            padding: 6px 12px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .edit-button:hover {
+            background: #0052a3;
+        }
+
+        .save-button {
+            padding: 8px 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .save-button:hover {
+            background: #218838;
+        }
+
+        .cancel-button {
+            padding: 8px 16px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: background 0.2s;
+        }
+
+        .cancel-button:hover {
+            background: #c82333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0,102,204,0.1);
+        }
+
+        .textarea-field {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            min-height: 60px;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+
+        .textarea-field:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0,102,204,0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: block;
+            object-fit: cover;
+            cursor: pointer;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-upload {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+            animation: fadeIn 0.3s;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .view-mode {
+            min-height: 20px;
+            padding: 4px 0;
+        }
+
+        .view-mode:empty::before {
+            content: 'Not specified';
+            color: #999;
+            font-style: italic;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                margin-bottom: -4px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button-group button {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .edit-button, .save-button, .cancel-button {
+                padding: 10px 16px;
+                font-size: 16px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .section-header .edit-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">My Profile</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="success-message" id="successMessage">Profile saved successfully!</div>
+
+        <!-- Profile Image Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Profile Picture</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('image-section')">Edit</button>
+            </div>
+            
+            <div class="image-upload">
+                <img src="https://i.pravatar.cc/300?img=11" alt="Profile Picture" class="profile-image" id="profileImage">
+                <input type="file" id="imageUpload" class="hidden" accept="image/*">
+            </div>
+        </div>
+
+        <!-- Account Info Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Account Info</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('account-info')">Edit</button>
+            </div>
+            
+            <div class="info-grid" id="account-info">
+                <div class="label">Name</div>
+                <div class="value" data-field="name">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Enter your name">
+                </div>
+
+                <div class="label">Member Since</div>
+                <div class="value" data-field="memberSince">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Month YYYY">
+                </div>
+
+                <div class="label">Member Number</div>
+                <div class="value" data-field="memberNumber">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="#HAR2024XXX">
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic Info Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Basic Info</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('basic-info')">Edit</button>
+            </div>
+            
+            <div class="info-grid" id="basic-info">
+                <div class="label">Gender</div>
+                <div class="value" data-field="gender">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Enter your gender">
+                </div>
+
+                <div class="label">Major</div>
+                <div class="value" data-field="major">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Enter your major">
+                </div>
+
+                <div class="label">Class Year</div>
+                <div class="value" data-field="classYear">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Enter your class year">
+                </div>
+
+                <!-- More basic info fields... -->
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Contact Info</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('contact-info')">Edit</button>
+            </div>
+            
+            <div class="info-grid" id="contact-info">
+                <div class="label">Email</div>
+                <div class="value" data-field="email">
+                    <span class="view-mode"></span>
+                    <input type="email" class="input-field edit-mode hidden" placeholder="Enter your email">
+                </div>
+
+                <div class="label">Phone</div>
+                <div class="value" data-field="phone">
+                    <span class="view-mode"></span>
+                    <input type="tel" class="input-field edit-mode hidden" placeholder="Enter your phone number">
+                </div>
+
+                <div class="label">Social Links</div>
+                <div class="value" data-field="social">
+                    <span class="view-mode"></span>
+                    <textarea class="input-field edit-mode hidden" placeholder="Enter your social media links"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Info Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Personal Info</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('personal-info')">Edit</button>
+            </div>
+            
+            <div class="info-grid" id="personal-info">
+                <div class="label">Bio</div>
+                <div class="value" data-field="bio">
+                    <span class="view-mode"></span>
+                    <textarea class="input-field edit-mode hidden" placeholder="Tell us about yourself"></textarea>
+                </div>
+
+                <div class="label">Interests</div>
+                <div class="value" data-field="interests">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your interests (comma separated)">
+                </div>
+
+                <div class="label">Hobbies</div>
+                <div class="value" data-field="hobbies">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your hobbies">
+                </div>
+
+                <div class="label">Favorite Movies</div>
+                <div class="value" data-field="movies">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your favorite movies">
+                </div>
+
+                <div class="label">Favorite Cuisine</div>
+                <div class="value" data-field="cuisine">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your favorite cuisine">
+                </div>
+            </div>
+        </div>
+
+        <!-- School Life Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">School Life</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('school-life')">Edit</button>
+            </div>
+            
+            <div class="info-grid" id="school-life">
+                <div class="label">Courses Taken</div>
+                <div class="value" data-field="courses">
+                    <span class="view-mode"></span>
+                    <textarea class="input-field edit-mode hidden" placeholder="List your courses"></textarea>
+                </div>
+
+                <div class="label">Clubs</div>
+                <div class="value" data-field="clubs">
+                    <span class="view-mode"></span>
+                    <textarea class="input-field edit-mode hidden" placeholder="List your club memberships"></textarea>
+                </div>
+
+                <div class="label">Study Spots</div>
+                <div class="value" data-field="studySpots">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your favorite study spots">
+                </div>
+
+                <div class="label">Campus Job</div>
+                <div class="value" data-field="campusJob">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your campus job">
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Story Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title">Your Story</div>
+                <button type="button" class="edit-button" onclick="toggleEdit('your-story')">Edit</button>
+            </div>
+            
+            <div class="info-grid" id="your-story">
+                <div class="label">Perfect Day</div>
+                <div class="value" data-field="perfectDay">
+                    <span class="view-mode"></span>
+                    <textarea class="input-field edit-mode hidden" placeholder="Describe your perfect day"></textarea>
+                </div>
+
+                <div class="label">Future Self</div>
+                <div class="value" data-field="futureSelf">
+                    <span class="view-mode"></span>
+                    <textarea class="input-field edit-mode hidden" placeholder="Where do you see yourself in the future?"></textarea>
+                </div>
+
+                <div class="label">Life Motto</div>
+                <div class="value" data-field="lifeMotto">
+                    <span class="view-mode"></span>
+                    <input type="text" class="input-field edit-mode hidden" placeholder="Your life motto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Save/Cancel Buttons -->
+        <div class="button-group">
+            <button type="button" class="save-button" onclick="saveProfile()">Save Profile</button>
+            <button type="button" class="cancel-button" onclick="cancelEdits()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Store original values for canceling edits
+        let originalValues = {};
+
+        // Function to toggle edit mode for a section
+        function toggleEdit(sectionId) {
+            const section = document.getElementById(sectionId);
+            const fields = section.querySelectorAll('.value[data-field]');
+            
+            // Store original values before editing
+            fields.forEach(field => {
+                const fieldName = field.getAttribute('data-field');
+                originalValues[fieldName] = {
+                    text: field.querySelector('.view-mode').textContent,
+                    value: field.querySelector('.edit-mode').value
+                };
+            });
+
+            // Toggle view/edit modes
+            fields.forEach(field => {
+                field.querySelector('.view-mode').classList.add('hidden');
+                field.querySelector('.edit-mode').classList.remove('hidden');
+            });
+        }
+
+        // Function to save profile changes
+        function saveProfile() {
+            const sections = ['account-info', 'basic-info', 'contact-info', 'personal-info', 'school-life', 'your-story'];
+            let updatedData = {};
+
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+
+                const fields = section.querySelectorAll('.value[data-field]');
+                fields.forEach(field => {
+                    const fieldName = field.getAttribute('data-field');
+                    const editMode = field.querySelector('.edit-mode');
+                    const viewMode = field.querySelector('.view-mode');
+                    
+                    // Update view mode with edited value
+                    if (editMode.tagName.toLowerCase() === 'textarea') {
+                        viewMode.innerHTML = editMode.value.replace(/\n/g, '<br>');
+                    } else {
+                        viewMode.textContent = editMode.value;
+                    }
+
+                    // Store updated value
+                    updatedData[fieldName] = editMode.value;
+
+                    // Reset display
+                    viewMode.classList.remove('hidden');
+                    editMode.classList.add('hidden');
+                });
+            });
+
+            // Save to localStorage
+            localStorage.setItem('profileData', JSON.stringify(updatedData));
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+
+        // Function to cancel edits
+        function cancelEdits() {
+            const sections = ['account-info', 'basic-info', 'contact-info', 'personal-info', 'school-life', 'your-story'];
+
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+
+                const fields = section.querySelectorAll('.value[data-field]');
+                fields.forEach(field => {
+                    const fieldName = field.getAttribute('data-field');
+                    const editMode = field.querySelector('.edit-mode');
+                    const viewMode = field.querySelector('.view-mode');
+
+                    // Restore original values
+                    if (originalValues[fieldName]) {
+                        viewMode.textContent = originalValues[fieldName].text;
+                        editMode.value = originalValues[fieldName].value;
+                    }
+
+                    // Reset display
+                    viewMode.classList.remove('hidden');
+                    editMode.classList.add('hidden');
+                });
+            });
+        }
+
+        // Handle profile image upload
+        document.getElementById('profileImage').addEventListener('click', function() {
+            document.getElementById('imageUpload').click();
+        });
+
+        document.getElementById('imageUpload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                    localStorage.setItem('profileImage', e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Load saved profile data on page load
+        window.addEventListener('load', function() {
+            const savedData = localStorage.getItem('profileData');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                Object.keys(data).forEach(fieldName => {
+                    const field = document.querySelector(`.value[data-field="${fieldName}"]`);
+                    if (field) {
+                        const viewMode = field.querySelector('.view-mode');
+                        const editMode = field.querySelector('.edit-mode');
+                        if (editMode.tagName.toLowerCase() === 'textarea') {
+                            viewMode.innerHTML = data[fieldName].replace(/\n/g, '<br>');
+                        } else {
+                            viewMode.textContent = data[fieldName];
+                        }
+                        editMode.value = data[fieldName];
+                    }
+                });
+            }
+
+            // Load saved profile image
+            const savedImage = localStorage.getItem('profileImage');
+            if (savedImage) {
+                document.getElementById('profileImage').src = savedImage;
+            }
+        });
+    </script>
+</body>
+</html>

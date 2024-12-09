@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Garcia - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: white;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-header p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: #f0f2f5;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .label {
+                margin-bottom: -4px;
+            }
+
+            .profile-header {
+                padding: 20px 15px;
+            }
+
+            .profile-dp {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list.html" class="back-button">←</a>
+        <div class="profile-name">Maria Garcia</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://i.pravatar.cc/300?img=25" alt="Maria Garcia" class="profile-dp">
+            <h1>Maria Garcia</h1>
+            <p>Psychology • Class of 2024 • 21 years</p>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name</div>
+                <div class="value">Maria Garcia</div>
+                
+                <div class="label">Member Since</div>
+                <div class="value">January 2024</div>
+                
+                <div class="label">Last Updated</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number</div>
+                <div class="value">#PSY2024008</div>
+                
+                <div class="label">Referred By</div>
+                <div class="value">Sarah Johnson</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender</div>
+                <div class="value">Female</div>
+                
+                <div class="label">Residence</div>
+                <div class="value">Adams House</div>
+                
+                <div class="label">Birthday</div>
+                <div class="value">05/12/2002</div>
+                
+                <div class="label">Hometown</div>
+                <div class="value">San Diego, California</div>
+                
+                <div class="label">Class of</div>
+                <div class="value">2024</div>
+                
+                <div class="label">High School</div>
+                <div class="value">Cathedral Catholic High School</div>
+                
+                <div class="label">Status</div>
+                <div class="value">Student</div>
+                
+                <div class="label">Elementary</div>
+                <div class="value">St. Michael's School</div>
+                
+                <div class="label">Zodiac</div>
+                <div class="value">Taurus</div>
+                
+                <div class="label">Psychic Profile</div>
+                <div class="value">Life Path Number: 4, Destiny Number: 8</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email</div>
+                <div class="value">mgarcia@harvard.edu</div>
+                
+                <div class="label">Links</div>
+                <div class="value">linkedin.com/in/mariagarcia<br>psychology.harvard.edu/people/maria-garcia</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for</div>
+                <div class="value">Research Opportunities, Psychology Study Groups, Mental Health Advocacy</div>
+                
+                <div class="label">Relationship</div>
+                <div class="value">In a Relationship</div>
+                
+                <div class="label">Political Views</div>
+                <div class="value">Mental Health Advocate, Social Justice</div>
+                
+                <div class="label">Interests</div>
+                <div class="value">
+                    <div class="interests-list">
+                        <span class="interest-tag">Clinical Psychology</span>
+                        <span class="interest-tag">Child Development</span>
+                        <span class="interest-tag">Neuroscience</span>
+                        <span class="interest-tag">Art Therapy</span>
+                        <span class="interest-tag">Mindfulness</span>
+                    </div>
+                </div>
+                
+                <div class="label">Favorite Psychologists</div>
+                <div class="value">Carl Jung, Daniel Kahneman, Carol Dweck</div>
+                
+                <div class="label">Favorite Movies</div>
+                <div class="value">Good Will Hunting, Inside Out, A Beautiful Mind</div>
+                
+                <div class="label">Favorite Cuisine</div>
+                <div class="value">Mexican, Mediterranean, Japanese</div>
+                
+                <div class="label">Public Figures</div>
+                <div class="value">Brené Brown, Martin Seligman, Angela Duckworth</div>
+                
+                <div class="label">Book Recommendations</div>
+                <div class="value">Thinking Fast and Slow, The Body Keeps the Score, Mindset</div>
+                
+                <div class="label">Manifestations</div>
+                <div class="value">To establish a youth mental health center</div>
+                
+                <div class="label">Future Aspirations</div>
+                <div class="value">Clinical Psychologist specializing in adolescent mental health</div>
+                
+                <div class="label">Amazing Memory</div>
+                <div class="value">First successful therapy session with a child during internship</div>
+                
+                <div class="label">Causes</div>
+                <div class="value">Mental Health Awareness, Youth Counseling, Emotional Intelligence Education</div>
+                
+                <div class="label">Baby Picture</div>
+                <div class="value"><img src="https://i.pravatar.cc/150?img=32" class="profile-image" alt="Baby Maria"></div>
+                
+                <div class="label">Dislikes</div>
+                <div class="value">Mental Health Stigma, Oversimplified Psychology, Poor Research Methods</div>
+                
+                <div class="label">Most Used Emojis</div>
+                <div class="value">🧠 💭 🤗 📚 ❤️</div>
+                
+    </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken</div>
+                <div class="value">Developmental Psychology, Abnormal Psychology, Research Methods, Clinical Psychology, Cognitive Neuroscience, Statistics in Psychology</div>
+                
+                <div class="label">Clubs</div>
+                <div class="value">Psychology Student Association President, Mental Health Awareness Club, Research Society</div>
+                
+                <div class="label">First Meal</div>
+                <div class="value">Breakfast at Adams House with fellow psychology majors</div>
+                
+                <div class="label">Study Spots</div>
+                <div class="value">William James Hall Library, Widener Library, Adams House Common Room</div>
+                
+                <div class="label">Campus Job</div>
+                <div class="value">Research Assistant in Child Development Lab</div>
+                
+                <div class="label">Office Hours</div>
+                <div class="value">Wednesdays 3-5 PM at Psychology Department</div>
+                
+                <div class="label">Health Tip</div>
+                <div class="value">Practice mindfulness between study sessions</div>
+                
+                <div class="label">Study Habits</div>
+                <div class="value">Group discussions, case study analysis, research paper reviews</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day</div>
+                <div class="value">Morning yoga, research in the lab, afternoon counseling practicum, evening discussion group about psychology</div>
+                
+                <div class="label">Value in Friendship</div>
+                <div class="value">Deep conversations and mutual emotional support</div>
+                
+                <div class="label">Future Self</div>
+                <div class="value">Leading a youth mental health clinic and conducting research on therapeutic interventions</div>
+                
+                <div class="label">Grateful For</div>
+                <div class="value">Supportive mentors, research opportunities, chance to make a difference in mental health</div>
+                
+                <div class="label">Favorite Place</div>
+                <div class="value">The meditation garden behind William James Hall</div>
+                
+                <div class="label">Passions</div>
+                <div class="value">Child Psychology, Mental Health Education, Art Therapy Research</div>
+                
+                <div class="label">Fictional Character</div>
+                <div class="value">Dr. Frasier Crane - but more focused on research and youth counseling</div>
+                
+                <div class="label">Future Advice</div>
+                <div class="value">Mental health is as important as physical health - never hesitate to seek help</div>
+                
+                <div class="label">Life Motto</div>
+                <div class="value">Understanding minds, healing hearts, one person at a time</div>
+                
+                <div class="label">Best Memory</div>
+                <div class="value">Presenting my first research paper at the Psychology Undergraduate Conference</div>
+                
+                <div class="label">Dream Project</div>
+                <div class="value">Creating an accessible mental health program for underprivileged youth</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
