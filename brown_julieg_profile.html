@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julie Greenwald - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-dp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .course-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 4px;
+            background-color: rgba(74, 144, 226, 0.3); /* Transparent background */
+            color: #4a90e2;
+            border: none;
+            border-radius: 8px; /* Rounded edges */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-button:hover {
+            background-color: rgba(74, 144, 226, 0.5); /* Darker transparent on hover */
+        }
+
+        @media (min-width: 600px) {
+            .profile-dp {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-grid {
+                grid-template-columns: 140px 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list_brown.html" class="back-button">←</a>
+        <div class="profile-name">Julie Greenwald</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/v1476683804/txbsvxspnuslogtr29ar.png" alt="Julie Greenwald" class="profile-dp">
+            <h1>Julie Greenwald</h1>
+            <p>Music Industry • Class of 1995 • 48 years</p>
+        </div>
+
+        <!-- Mutual Friends -->
+        <div class="section mutual-friends">
+            <div class="section-title">Mutual Friends</div>
+            <div class="value">
+                <a href="brown_masi_profile.html" class="friend-link">Masi Oka</a>, 
+                <a href="brown_marcia_cross_profile.html" class="friend-link">Marcia Cross</a>, 
+                <a href="brown_steven_profile.html" class="friend-link">Steven Rattner</a>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name:</div>
+                <div class="value">Julie Greenwald</div>
+                
+                <div class="label">Member Since:</div>
+                <div class="value">November 2024</div>
+                
+                <div class="label">Last Updated:</div>
+                <div class="value">Dec 21, 2024</div>
+                
+                <div class="label">Member Number:</div>
+                <div class="value">#MUSIC199501</div>
+                
+                <div class="label">Referred By:</div>
+                <div class="value">Emma Watson</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender:</div>
+                <div class="value">Female</div>
+                
+                <div class="label">Residence:</div>
+                <div class="value">Los Angeles, CA</div>
+                
+                <div class="label">Birthday:</div>
+                <div class="value">March 5, 1976</div>
+                
+                <div class="label">Hometown:</div>
+                <div class="value">New York, New York</div>
+                
+                <div class="label">Class of:</div>
+                <div class="value">1995</div>
+                
+                <div class="label">High School:</div>
+                <div class="value">The Spence School</div>
+                
+                <div class="label">Status:</div>
+                <div class="value">Alumni</div>
+                
+                <div class="label">Elementary School:</div>
+                <div class="value">The Dalton School</div>
+                
+                <div class="label">Zodiac:</div>
+                <div class="value">Pisces</div>
+                
+                <div class="label">Psychic Profile:</div>
+                <div class="value">Life Path Number: 6, Destiny Number: 9</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email:</div>
+                <div class="value">julie.greenwald@brown.edu</div>
+                
+                <div class="label">Links:</div>
+                <div class="value">github.com/juliegreenwald<br>linkedin.com/in/juliegreenwald</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for:</div>
+                <div class="value">Collaborations, Networking, Music Projects</div>
+                
+                <div class="label">Relationship Status:</div>
+                <div class="value">Married</div>
+                
+                <div class="label">Political Views:</div>
+                <div class="value">Liberal</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken:</div>
+                <div class="value">
+                    <a class="course-button">Music Theory</a>
+                    <a class="course-button">Music Business</a>
+                    <a class="course-button">Songwriting</a>
+                    <a class="course-button">Music Production</a>
+                    <a class="course-button">Marketing</a>
+                    <a class="course-button">Media Studies</a>
+                </div>
+                
+                <div class="label">Clubs:</div>
+                <div class="value">Music Club, Drama Society</div>
+                
+                <div class="label">First Meal:</div>
+                <div class="value">Pancakes from the campus café</div>
+                
+                <div class="label">Health Tip:</div>
+                <div class="value">Stay active and keep your mind sharp.</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day:</div>
+                <div class="value">Recording a new album followed by a concert.</div>
+                
+                <div class="label">Value in Friendship:</div>
+                <div class="value">Support, creativity, and shared experiences.</div>
+                
+                <div class="label">Future Self:</div>
+                <div class="value">A successful music executive and mentor.</div>
+                
+                <div class="label">Grateful For:</div>
+                <div class="value">My family and the artists I work with.</div>
+                
+                <div class="label">Favorite Place:</div>
+                <div class="value">The Hollywood Bowl.</div>
+                
+                <div class="label">Passions:</div>
+                <div class="value">Music, mentoring, and philanthropy.</div>
+                
+                <div class="label">Fictional Character:</div>
+                <div class="value">Jo March from "Little Women"</div>
+                
+                <div class="label">Advice for Future You:</div>
+                <div class="value">Always stay true to your passion and values.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

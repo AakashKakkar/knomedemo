@@ -40,13 +40,6 @@
                     <select id="school" name="school" required>
                         <option value="">Select your school</option>
                         <option value="brown">Brown University</option>
-                        <option value="columbia">Columbia University</option>
-                        <option value="cornell">Cornell University</option>
-                        <option value="dartmouth">Dartmouth College</option>
-                        <option value="harvard">Harvard University</option>
-                        <option value="penn">University of Pennsylvania</option>
-                        <option value="princeton">Princeton University</option>
-                        <option value="yale">Yale University</option>
                     </select>
                 </div>
 
@@ -92,5 +85,23 @@
             <p>&copy; 2024 Know.me. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            // Get the selected school value
+            const selectedSchool = document.getElementById('school').value;
+            
+            // Store it in localStorage
+            localStorage.setItem('selectedSchool', selectedSchool);
+        });
+
+        // Optional: If you want to remember the previously selected school
+        window.onload = function() {
+            const previousSchool = localStorage.getItem('selectedSchool');
+            if (previousSchool) {
+                document.getElementById('school').value = previousSchool;
+            }
+        }
+    </script>
 </body>
 </html>

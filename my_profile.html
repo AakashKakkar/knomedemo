@@ -198,96 +198,14 @@
             border-radius: 4px;
             margin-bottom: 20px;
             display: none;
-            animation: fadeIn 0.3s;
-            text-align: center;
-            font-size: 14px;
         }
 
-        .view-mode {
-            min-height: 20px;
-            padding: 4px 0;
-        }
-
-        .view-mode:empty::before {
-            content: 'Not specified';
-            color: #999;
-            font-style: italic;
-        }
-
-        .interests-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .interest-tag {
-            background: #f0f2f5;
-            padding: 4px 12px;
-            border-radius: 16px;
-            font-size: 13px;
-            color: #333;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 600px) {
-            .profile-container {
-                padding: 12px;
-            }
-
-            .section {
-                padding: 15px;
-                margin-bottom: 15px;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-
-            .label {
-                margin-bottom: -4px;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .button-group button {
-                width: 100%;
-                margin: 5px 0;
-            }
-
-            .profile-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            .edit-button, .save-button, .cancel-button {
-                padding: 10px 16px;
-                font-size: 16px;
-            }
-
-            .section-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .section-header .edit-button {
-                width: 100%;
-            }
-        }
+        /* Additional styles can be added here */
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="user_list.html" class="back-button">←</a>
+        <a id="backButton" href="#" class="back-button">←</a>
         <div class="profile-name">My Profile</div>
     </div>
 
@@ -302,7 +220,7 @@
             </div>
             
             <div class="image-upload">
-                <img src="https://i.pravatar.cc/300?img=11" alt="Profile Picture" class="profile-image" id="profileImage">
+                <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="Profile Picture" class="profile-image" id="profileImage">
                 <input type="file" id="imageUpload" class="hidden" accept="image/*">
             </div>
         </div>
@@ -360,8 +278,6 @@
                     <span class="view-mode"></span>
                     <input type="text" class="input-field edit-mode hidden" placeholder="Enter your class year">
                 </div>
-
-                <!-- More basic info fields... -->
             </div>
         </div>
 
@@ -637,6 +553,14 @@
             const savedImage = localStorage.getItem('profileImage');
             if (savedImage) {
                 document.getElementById('profileImage').src = savedImage;
+            }
+
+            // Set back button URL based on selected school
+            const previousSchool = localStorage.getItem('selectedSchool');
+            if (previousSchool) {
+                document.getElementById('backButton').href = `user_list_${previousSchool}.html`;
+            } else {
+                document.getElementById('backButton').href = 'user_list_dartmouth.html'; // Default fallback
             }
         });
     </script>

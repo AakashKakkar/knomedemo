@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>know.me@Brown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="user_list.css">
+    <style>
+        /* Bottom Navigation Styles */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #666;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-item.active {
+            color: #0066cc;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        /* Adjust main content to account for bottom nav */
+        .user-list {
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">know.me@Brown</div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search people...">
+    </div>
+
+    <div class="user-list">
+        <!-- First 20 profiles for user_list_brown.html -->
+        <a href="brown_emma_profile.html" class="user-item">
+            <img src="https://files.idyllic.app/files/static/250419?width=256&optimizer=image" alt="Emma Watson">
+            <div class="user-details">
+                <h2>Emma Watson</h2>
+                <p>English Literature • Class of 2014 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_john_profile.html" class="user-item">
+            <img src="https://styles.redditmedia.com/t5_7mnise/styles/communityIcon_p1a7m4qcv77a1.png" alt="John Krasinski">
+            <div class="user-details">
+                <h2>John Krasinski</h2>
+                <p>Theatre Arts • Class of 2001 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_laura_profile.html" class="user-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbivJtRvSgqbg6OdX2j7o_mOLevOpQqd8_fg&s" alt="Laura Linney">
+            <div class="user-details">
+                <h2>Laura Linney</h2>
+                <p>Theatre Arts • Class of 1986 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_julie_profile.html" class="user-item">
+            <img src="https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9hc3NldHMucGlwcGEuaW8vc2hvd3MvNjFiNzc0NzAxNjk1NjI1MDJlZTk1MGM0LzE3MjYxMzIyODUyNzgtOTQ4MWVmNzktZDcyMy00NzY0LTkxMGQtNWVmOWIyM2FiYTQ1LmpwZWc%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D" alt="Julie Bowen">
+            <div class="user-details">
+                <h2>Julie Bowen</h2>
+                <p>Italian Renaissance Studies • Class of 1991 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_masi_profile.html" class="user-item">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/v1471863247/marrivj7j0h575zgdslt.png" alt="David Byrne">
+            <div class="user-details">
+                <h2>masi oka</h2>
+                <p>Music • Class of 1997 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_david_profile.html" class="user-item">
+            <img src="https://media.muckrack.com/profile/images/31963/rohded.jpeg.256x256_q100_crop-smart.jpg" alt="Masi Oka">
+            <div class="user-details">
+                <h2>David Rohde</h2>
+                <p>Literature • Class of 1990 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_marcia_profile.html" class="user-item">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/96/96/60ccfd9c-MarciaCrossEyes.jpg?ve=1&tl=1 alt="Marcia Cross">
+            <div class="user-details">
+                <h2>Marcia Cross</h2>
+                <p>Drama • Class of 1984 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_brian_profile.html" class="user-item">
+            <img src="https://bounce.com/_next/image?url=https%3A%2F%2Fmarketing.bounce.com%2F_next%2Fstatic%2Fmedia%2Fuser-11.5a3f8249.png&w=380&q=75" alt="Brian Moynihan">
+            <div class="user-details">
+                <h2>Brian Moynihan</h2>
+                <p>History • Class of 1981 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_steven_profile.html" class="user-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxPKk_470G37xhZx3HQ78lwEOxYAXMG5PUBQ&s" alt="Steven Rattner">
+            <div class="user-details">
+                <h2>Steven Rattner</h2>
+                <p>Economics • Class of 1974 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_julieg_profile.html" class="user-item">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/v1476683804/txbsvxspnuslogtr29ar.png" alt="Julie Greenwald">
+            <div class="user-details">
+                <h2>Julie Greenwald</h2>
+                <p>Political Science • Class of 1991 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_tracy_profile.html" class="user-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsv6nFCRJH9UyMFj34fKJvNG_ojroUxIVAmQ&s" alt="Tracy K. Smith">
+            <div class="user-details">
+                <h2>Tracy K. Smith</h2>
+                <p>English • Class of 1994 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_jeffrey_profile.html" class="user-item">
+            <img src="https://r2.1k-cdn.com/sig/size:256/plain/https%3A%2F%2F1k-cdn.com%2Fresimler%2F%2Fyazarlar%2F5740_1456911141.jpg" alt="Jeffrey Eugenides">
+            <div class="user-details">
+                <h2>Jeffrey Eugenides</h2>
+                <p>English • Class of 1982 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_lisa_profile.html" class="user-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDfXDJVJ4tQdd6MVV6M9FTpkqMZJ9CTleTpA&s" alt="Lisa Randall">
+            <div class="user-details">
+                <h2>Lisa Randall</h2>
+                <p>Physics • Class of 1984 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_bobby_profile.html" class="user-item">
+            <img src="https://pbs.twimg.com/profile_images/619255140445351936/sX-xWdHH_400x400.jpg" alt="Bobby Jindal">
+            <div class="user-details">
+                <h2>Bobby Jindal</h2>
+                <p>Biology • Class of 1991 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_andrew_profile.html" class="user-item">
+            <img src="https://d3g9pb5nvr3u7.cloudfront.net/sites/61bb7011e841156ed0086ea6/-1442092287/256.jpg" alt="Andrew Yang">
+            <div class="user-details">
+                <h2>Andrew Yang</h2>
+                <p>Economics • Class of 1996 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_craig_profile.html" class="user-item">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/v1491754498/r1dtaos7zu94x0wbzo1w.png" alt="Craig Newmark">
+            <div class="user-details">
+                <h2>Craig Newmark</h2>
+                <p>Computer Science • Class of 1975 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_duncan_profile.html" class="user-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCo5fcY2CIWdpQUdNLtz1K4U-CQSaOEz2c8w&s" alt="Duncan Sheik">
+            <div class="user-details">
+                <h2>Duncan Sheik</h2>
+                <p>Semiotics • Class of 1992 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_dara_profile.html" class="user-item">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/nxxdpvkgkt7si1yu8wpg" alt="Dara">
+    <div class="user-details">
+                <h2>Dara Khosrowshahi</h2>
+                <p>Electrical & Electronics • Class of 1991 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_tracee_profile.html" class="user-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEqOSlFOOZG2IJHyc9s2xUkoIjRy6qjty_KA&s" alt="Una Clarke">
+            <div class="user-details">
+                <h2>Tracee Ellis Ross</h2>
+                <p>Economics • Class of 1989 • Alumni</p>
+            </div>
+        </a>
+
+        <a href="brown_ted_profile.html" class="user-item">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/vngl0troqhfclshonu7u" alt="Ted Turner">
+            <div class="user-details">
+                <h2>Ted Turner</h2>
+                <p>Economics • Class of 1994 • Alumni</p>
+            </div>
+        </a>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <div class="nav-icon">🙋‍♀️</div>
+                <span>User List</span>
+            </a>
+            <a href="visual_network_brown.html" class="nav-item">
+                <div class="nav-icon">🌐</div>
+                <span>Visual Network</span>
+            </a>
+            <a href="my_profile.html" class="nav-item">
+                <div class="nav-icon">🫵</div>
+                <span>My Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <script>
+        // Same JavaScript as Harvard version
+        function updateNavActive(clickedNav) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            clickedNav.classList.add('active');
+        }
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (!this.href.includes('my_profile.html') && !this.href.includes('visual_network_brown.html')) {
+                    e.preventDefault();
+                    updateNavActive(this);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

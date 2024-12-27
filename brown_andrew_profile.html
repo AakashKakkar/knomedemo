@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Yang - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-dp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .course-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 4px;
+            background-color: rgba(74, 144, 226, 0.3); /* Transparent background */
+            color: #4a90e2;
+            border: none;
+            border-radius: 8px; /* Rounded edges */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-button:hover {
+            background-color: rgba(74, 144, 226, 0.5); /* Darker transparent on hover */
+        }
+
+        @media (min-width: 600px) {
+            .profile-dp {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-grid {
+                grid-template-columns: 140px 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list_brown.html" class="back-button">←</a>
+        <div class="profile-name">Andrew Yang</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://d3g9pb5nvr3u7.cloudfront.net/sites/61bb7011e841156ed0086ea6/-1442092287/256.jpg" alt="Andrew Yang" class="profile-dp">
+            <h1>Andrew Yang</h1>
+            <p>Entrepreneur • Class of 1996 • 48 years</p>
+        </div>
+
+        <!-- Mutual Friends -->
+        <div class="section mutual-friends">
+            <div class="section-title">Mutual Friends</div>
+            <div class="value">
+                <a href="brown_masi_profile.html" class="friend-link">Masi Oka</a>, 
+                <a href="brown_marcia_profile.html" class="friend-link">Marcia Cross</a>, 
+                <a href="brown_laura_profile.html" class="friend-link">Laura Linney</a>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name:</div>
+                <div class="value">Andrew Yang</div>
+                
+                <div class="label">Member Since:</div>
+                <div class="value">October 2024</div>
+                
+                <div class="label">Last Updated:</div>
+                <div class="value">December 22, 2024</div>
+                
+                <div class="label">Member Number:</div>
+                <div class="value">#ENTREPRENEUR199601</div>
+                
+                <div class="label">Referred By:</div>
+                <div class="value">Julie Bowen</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender:</div>
+                <div class="value">Male</div>
+                
+                <div class="label">Residence:</div>
+                <div class="value">New York, NY</div>
+                
+                <div class="label">Birthday:</div>
+                <div class="value">January 13, 1975</div>
+                
+                <div class="label">Hometown:</div>
+                <div class="value">Schenectady, New York</div>
+                
+                <div class="label">Class of:</div>
+                <div class="value">1996</div>
+                
+                <div class="label">High School:</div>
+                <div class="value">Stuyvesant High School</div>
+                
+                <div class="label">Status:</div>
+                <div class="value">Alumni</div>
+                
+                <div class="label">Elementary School:</div>
+                <div class="value">The Dalton School</div>
+                
+                <div class="label">Zodiac:</div>
+                <div class="value">Capricorn</div>
+                
+                <div class="label">Psychic Profile:</div>
+                <div class="value">Life Path Number: 1, Destiny Number: 5</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email:</div>
+                <div class="value">andrew.yang@brown.edu</div>
+                
+                <div class="label">Links:</div>
+                <div class="value">github.com/andrewyang<br>linkedin.com/in/andrewyang</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for:</div>
+                <div class="value">Collaborations, Networking, Business Opportunities</div>
+                
+                <div class="label">Relationship Status:</div>
+                <div class="value">Married</div>
+                
+                <div class="label">Political Views:</div>
+                <div class="value">Progressive</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken:</div>
+                <div class="value">
+                    <a class="course-button">Economics</a>
+                    <a class="course-button">Political Science</a>
+                    <a class="course-button">Entrepreneurship</a>
+                    <a class="course-button">Statistics</a>
+                    <a class="course-button">Public Policy</a>
+                    <a class="course-button">Business Management</a>
+                </div>
+                
+                <div class="label">Clubs:</div>
+                <div class="value">Debate Club, Entrepreneurship Society</div>
+                
+                <div class="label">First Meal:</div>
+                <div class="value">Sushi from the campus dining hall</div>
+                
+                <div class="label">Health Tip:</div>
+                <div class="value">Stay active and engaged in your community.</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day:</div>
+                <div class="value">Meeting with innovators followed by a family dinner.</div>
+                
+                <div class="label">Value in Friendship:</div>
+                <div class="value">Support, honesty, and shared goals.</div>
+                
+                <div class="label">Future Self:</div>
+                <div class="value">A successful entrepreneur and public servant.</div>
+                
+                <div class="label">Grateful For:</div>
+                <div class="value">My family and the opportunities I've had.</div>
+                
+                <div class="label">Favorite Place:</div>
+                <div class="value">Central Park, New York.</div>
+                
+                <div class="label">Passions:</div>
+                <div class="value">Technology, innovation, and community service.</div>
+                
+                <div class="label">Fictional Character:</div>
+                <div class="value">Peter Parker from "Spider-Man"</div>
+                
+                <div class="label">Advice for Future You:</div>
+                <div class="value">Always stay true to your values and vision.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

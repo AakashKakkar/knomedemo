@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masi Oka - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-dp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .mutual-friends {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .friend-link {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .friend-link:hover {
+            text-decoration: underline;
+        }
+
+        .course-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 4px;
+            background-color: rgba(74, 144, 226, 0.3); /* Transparent background */
+            color: #4a90e2;
+            border: none;
+            border-radius: 8px; /* Rounded edges */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-button:hover {
+            background-color: rgba(74, 144, 226, 0.5); /* Darker transparent on hover */
+        }
+
+        @media (min-width: 600px) {
+            .profile-dp {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-grid {
+                grid-template-columns: 140px 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list_brown.html" class="back-button">←</a>
+        <div class="profile-name">Masi Oka</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://images.crunchbase.com/image/upload/c_thumb,h_256,w_256,f_auto,g_face,z_0.7,q_auto:eco,dpr_1/v1471863247/marrivj7j0h575zgdslt.png" alt="Masi Oka" class="profile-dp">
+            <h1>Masi Oka</h1>
+            <p>Music• Class of 1997 • 48 years</p>
+        </div>
+
+        <!-- Mutual Friends -->
+        <div class="section mutual-friends">
+            <div class="section-title">Mutual Friends</div>
+            <div class="value">
+                <a href="brown_emma_profile.html" class="friend-link">Emma Watson</a>, 
+                <a href="brown_john_profile.html" class="friend-link">John Krasinski</a>, 
+                <a href="brown_julie_profile.html" class="friend-link">Julie Bowen</a>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name:</div>
+                <div class="value">Masi Oka</div>
+                
+                <div class="label">Member Since:</div>
+                <div class="value">September 1997</div>
+                
+                <div class="label">Last Updated:</div>
+                <div class="value">March 26, 2024</div>
+                
+                <div class="label">Member Number:</div>
+                <div class="value">#FILM199701</div>
+                
+                <div class="label">Referred By:</div>
+                <div class="value">Emma Watson</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender:</div>
+                <div class="value">Male</div>
+                
+                <div class="label">Residence:</div>
+                <div class="value">Los Angeles, CA</div>
+                
+                <div class="label">Birthday:</div>
+                <div class="value">10/27/1975</div>
+                
+                <div class="label">Hometown:</div>
+                <div class="value">Tokyo, Japan</div>
+                
+                <div class="label">Class of:</div>
+                <div class="value">1997</div>
+                
+                <div class="label">High School:</div>
+                <div class="value">The Buckley School</div>
+                
+                <div class="label">Status:</div>
+                <div class="value">Alumni</div>
+                
+                <div class="label">Elementary School:</div>
+                <div class="value">The International School of Los Angeles</div>
+                
+                <div class="label">Zodiac:</div>
+                <div class="value">Scorpio</div>
+                
+                <div class="label">Psychic Profile:</div>
+                <div class="value">Life Path Number: 8, Destiny Number: 3</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email:</div>
+                <div class="value">masi.oka@brown.edu</div>
+                
+                <div class="label">Links:</div>
+                <div class="value">github.com/masioka<br>linkedin.com/masioka</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for:</div>
+                <div class="value">Collaborations, Networking, Film Projects</div>
+                
+                <div class="label">Relationship Status:</div>
+                <div class="value">Single</div>
+                
+                <div class="label">Political Views:</div>
+                <div class="value">Progressive</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken:</div>
+                <div class="value">
+                    <a class="course-button">Acting</a>
+                    <a class="course-button">Film Studies</a>
+                    <a class="course-button">Creative Writing</a>
+                    <a class="course-button">Directing</a>
+                    <a class="course-button">Theater Production</a>
+                    <a class="course-button">Media Studies</a>
+                </div>
+                
+                <div class="label">Clubs:</div>
+                <div class="value">Drama Club, Film Society</div>
+                
+                <div class="label">First Meal:</div>
+                <div class="value">Breakfast at the campus café</div>
+                
+                <div class="label">Health Tip:</div>
+                <div class="value">Balance work and relaxation for mental health.</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day:</div>
+                <div class="value">Filming a great scene followed by dinner with friends.</div>
+                
+                <div class="label">Value in Friendship:</div>
+                <div class="value">Loyalty, humor, and support.</div>
+                
+                <div class="label">Future Self:</div>
+                <div class="value">A successful director and producer.</div>
+                
+                <div class="label">Grateful For:</div>
+                <div class="value">My family and supportive friends.</div>
+                
+                <div class="label">Favorite Place:</div>
+                <div class="value">The beach in Cape Cod.</div>
+                
+                <div class="label">Passions:</div>
+                <div class="value">Acting, directing, and writing.</div>
+                
+                <div class="label">Fictional Character:</div>
+                <div class="value">Hiro Nakamura</div>
+                
+                <div class="label">Advice for Future You:</div>
+                <div class="value">Stay humble and keep learning.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

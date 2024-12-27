@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracy K. Smith - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-dp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .course-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 4px;
+            background-color: rgba(74, 144, 226, 0.3); /* Transparent background */
+            color: #4a90e2;
+            border: none;
+            border-radius: 8px; /* Rounded edges */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-button:hover {
+            background-color: rgba(74, 144, 226, 0.5); /* Darker transparent on hover */
+        }
+
+        @media (min-width: 600px) {
+            .profile-dp {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-grid {
+                grid-template-columns: 140px 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list_brown.html" class="back-button">←</a>
+        <div class="profile-name">Tracy K. Smith</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsv6nFCRJH9UyMFj34fKJvNG_ojroUxIVAmQ&s" alt="Tracy K. Smith" class="profile-dp">
+            <h1>Tracy K. Smith</h1>
+            <p>Poet • Class of 1994 • 46 years</p>
+        </div>
+
+        <!-- Mutual Friends -->
+        <div class="section mutual-friends">
+            <div class="section-title">Mutual Friends</div>
+            <div class="value">
+                <a href="brown_masi_profile.html" class="friend-link">Masi Oka</a>, 
+                <a href="brown_marcia_cross_profile.html" class="friend-link">Marcia Cross</a>, 
+                <a href="brown_laura_profile.html" class="friend-link">Laura Linney</a>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name:</div>
+                <div class="value">Tracy K. Smith</div>
+                
+                <div class="label">Member Since:</div>
+                <div class="value">December 2024</div>
+                
+                <div class="label">Last Updated:</div>
+                <div class="value">November 21, 2024</div>
+                
+                <div class="label">Member Number:</div>
+                <div class="value">#POET199701</div>
+                
+                <div class="label">Referred By:</div>
+                <div class="value">Emma Watson</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender:</div>
+                <div class="value">Female</div>
+                
+                <div class="label">Residence:</div>
+                <div class="value">Princeton, NJ</div>
+                
+                <div class="label">Birthday:</div>
+                <div class="value">April 16, 1977</div>
+                
+                <div class="label">Hometown:</div>
+                <div class="value">Fremont, California</div>
+                
+                <div class="label">Class of:</div>
+                <div class="value">1997</div>
+                
+                <div class="label">High School:</div>
+                <div class="value">Fremont High School</div>
+                
+                <div class="label">Status:</div>
+                <div class="value">Alumni</div>
+                
+                <div class="label">Elementary School:</div>
+                <div class="value">The School of Arts</div>
+                
+                <div class="label">Zodiac:</div>
+                <div class="value">Aries</div>
+                
+                <div class="label">Psychic Profile:</div>
+                <div class="value">Life Path Number: 3, Destiny Number: 6</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email:</div>
+                <div class="value">tracy.smith@brown.edu</div>
+                
+                <div class="label">Links:</div>
+                <div class="value">github.com/tracyksmith<br>linkedin.com/in/tracyksmith</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for:</div>
+                <div class="value">Collaborations, Networking, Poetry Readings</div>
+                
+                <div class="label">Relationship Status:</div>
+                <div class="value">Single</div>
+                
+                <div class="label">Political Views:</div>
+                <div class="value">Liberal</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken:</div>
+                <div class="value">
+                    <a class="course-button">Creative Writing</a>
+                    <a class="course-button">Poetry Workshop</a>
+                    <a class="course-button">Literature</a>
+                    <a class="course-button">American Poetry</a>
+                    <a class="course-button">Art of Poetry</a>
+                    <a class="course-button">Cultural Studies</a>
+                </div>
+                
+                <div class="label">Clubs:</div>
+                <div class="value">Poetry Club, Literary Society</div>
+                
+                <div class="label">First Meal:</div>
+                <div class="value">Oatmeal from the campus café</div>
+                
+                <div class="label">Health Tip:</div>
+                <div class="value">Stay inspired and keep writing.</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day:</div>
+                <div class="value">Writing in a café followed by a poetry reading.</div>
+                
+                <div class="label">Value in Friendship:</div>
+                <div class="value">Creativity, support, and shared passions.</div>
+                
+                <div class="label">Future Self:</div>
+                <div class="value">A celebrated poet and author.</div>
+                
+                <div class="label">Grateful For:</div>
+                <div class="value">My family and the literary community.</div>
+                
+                <div class="label">Favorite Place:</div>
+                <div class="value">The New York Public Library.</div>
+                
+                <div class="label">Passions:</div>
+                <div class="value">Poetry, writing, and teaching.</div>
+                
+                <div class="label">Fictional Character:</div>
+                <div class="value">Elizabeth Bennet from "Pride and Prejudice"</div>
+                
+                <div class="label">Advice for Future You:</div>
+                <div class="value">Always find beauty in the world and express it through your art.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

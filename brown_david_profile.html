@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Rohde - Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .profile-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-dp {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .value {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .course-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 4px;
+            background-color: rgba(74, 144, 226, 0.3); /* Transparent background */
+            color: #4a90e2;
+            border: none;
+            border-radius: 8px; /* Rounded edges */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-button:hover {
+            background-color: rgba(74, 144, 226, 0.5); /* Darker transparent on hover */
+        }
+
+        @media (min-width: 600px) {
+            .profile-dp {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-grid {
+                grid-template-columns: 140px 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="user_list_brown.html" class="back-button">←</a>
+        <div class="profile-name">David Rohde</div>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://media.muckrack.com/profile/images/31963/rohded.jpeg.256x256_q100_crop-smart.jpg" alt="David Rohde" class="profile-dp">
+            <h1>David Rohde</h1>
+            <p>Journalism • Class of 1990 • 50 years</p>
+        </div>
+
+        <!-- Mutual Friends -->
+        <div class="section mutual-friends">
+            <div class="section-title">Mutual Friends</div>
+            <div class="value">
+                <a href="brown_craig_profile.html" class="friend-link">Craig Newmark</a>, 
+                <a href="brown_duncan_profile.html" class="friend-link">Duncan Trussell</a>, 
+                <a href="brown_bobby_profile.html" class="friend-link">Bobby Jindal</a>
+            </div>
+        </div>
+
+        <!-- Account Info -->
+        <div class="section">
+            <div class="section-title">Account Info</div>
+            <div class="info-grid">
+                <div class="label">Name:</div>
+                <div class="value">David Rohde</div>
+                
+                <div class="label">Member Since:</div>
+                <div class="value">September 2023</div>
+                
+                <div class="label">Last Updated:</div>
+                <div class="value">March 31, 2024</div>
+                
+                <div class="label">Member Number:</div>
+                <div class="value">#JOUR199501</div>
+                
+                <div class="label">Referred By:</div>
+                <div class="value">Ted Turner</div>
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="section">
+            <div class="section-title">Basic Info</div>
+            <div class="info-grid">
+                <div class="label">Gender:</div>
+                <div class="value">Male</div>
+                
+                <div class="label">Residence:</div>
+                <div class="value">New York, NY</div>
+                
+                <div class="label">Birthday:</div>
+                <div class="value">11/21/1973</div>
+                
+                <div class="label">Hometown:</div>
+                <div class="value">New York, New York</div>
+                
+                <div class="label">Class of:</div>
+                <div class="value">1995</div>
+                
+                <div class="label">High School:</div>
+                <div class="value">The Dalton School</div>
+                
+                <div class="label">Status:</div>
+                <div class="value">Alumni</div>
+                
+                <div class="label">Elementary School:</div>
+                <div class="value">The Spence School</div>
+                
+                <div class="label">Zodiac:</div>
+                <div class="value">Scorpio</div>
+                
+                <div class="label">Psychic Profile:</div>
+                <div class="value">Life Path Number: 5, Destiny Number: 7</div>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="section">
+            <div class="section-title">Contact Info</div>
+            <div class="info-grid">
+                <div class="label">Email:</div>
+                <div class="value">david.rohde@brown.edu</div>
+                
+                <div class="label">Links:</div>
+                <div class="value">github.com/davidrohde<br>linkedin.com/in/davidrohde</div>
+            </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="section">
+            <div class="section-title">Personal Info</div>
+            <div class="info-grid">
+                <div class="label">Looking for:</div>
+                <div class="value">Collaborations, Networking, Journalism Projects</div>
+                
+                <div class="label">Relationship Status:</div>
+                <div class="value">Married</div>
+                
+                <div class="label">Political Views:</div>
+                <div class="value">Independent</div>
+            </div>
+        </div>
+
+        <!-- School Life -->
+        <div class="section">
+            <div class="section-title">School Life</div>
+            <div class="info-grid">
+                <div class="label">Courses Taken:</div>
+                <div class="value">
+                    <a class="course-button">Journalism</a>
+                    <a class="course-button">Media Ethics</a>
+                    <a class="course-button">Creative Writing</a>
+                    <a class="course-button">Political Science</a>
+                    <a class="course-button">History of Journalism</a>
+                    <a class="course-button">Documentary Filmmaking</a>
+                </div>
+                
+                <div class="label">Clubs:</div>
+                <div class="value">Journalism Club, Debate Team</div>
+                
+                <div class="label">First Meal:</div>
+                <div class="value">Breakfast at the New York Times office</div>
+                
+                <div class="label">Health Tip:</div>
+                <div class="value">Stay informed and balanced in your reporting.</div>
+            </div>
+        </div>
+
+        <!-- Your Story -->
+        <div class="section">
+            <div class="section-title">Your Story</div>
+            <div class="info-grid">
+                <div class="label">Perfect Day:</div>
+                <div class="value">Interviewing a fascinating subject followed by a great meal.</div>
+                
+                <div class="label">Value in Friendship:</div>
+                <div class="value">Trust, honesty, and shared experiences.</div>
+                
+                <div class="label">Future Self:</div>
+                <div class="value">A renowned journalist and author.</div>
+                
+                <div class="label">Grateful For:</div>
+                <div class="value">My family and supportive colleagues.</div>
+                
+                <div class="label">Favorite Place:</div>
+                <div class="value">The New York Times office.</div>
+                
+                <div class="label">Passions:</div>
+                <div class="value">Investigative journalism, storytelling, and travel.</div>
+                
+                <div class="label">Fictional Character:</div>
+                <div class="value">Woodward and Bernstein</div>
+                
+                <div class="label">Advice for Future You:</div>
+                <div class="value">Always seek the truth and tell the stories that matter.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
