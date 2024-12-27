@@ -56,7 +56,31 @@
     <div class="welcome-card">
         <h1>Welcome to your school social network!</h1>
         <p>We hope you enjoy the experience. You're now part of an exclusive community where you can connect with your peers and make meaningful connections.</p>
-        <a href="user_list.html" class="continue-button">Continue to Community</a>
+        <a href="#" class="continue-button" id="continueBtn">Continue to Community</a>
     </div>
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const email = urlParams.get('email');
+        const status = urlParams.get('status');
+        
+        // Store user info
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userStatus', status);
+
+        // Handle continue button click
+        document.getElementById('continueBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const school = localStorage.getItem('selectedSchool');
+            if (school) {
+                window.location.href = `user_list_${school}.html`;
+            } else {
+                // Fallback if no school is stored
+                window.location.href = 'user_list_brown.html';
+            }
+        });
+    </script>
 </body>
 </html>
